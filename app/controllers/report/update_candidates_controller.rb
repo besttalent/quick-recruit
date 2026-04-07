@@ -5,7 +5,7 @@ class Report::UpdateCandidatesController < Report::BaseController
 
     @sources = Source.all
 
-    @pagy, @candidates = pagy_nil_safe(params, entries, items: LIMIT)
+    @pagy, @candidates = pagy_nil_safe(params, entries, limit: LIMIT)
     render_partial("report/update_candidates/candidate", collection: @candidates, cached: false)
   end
 

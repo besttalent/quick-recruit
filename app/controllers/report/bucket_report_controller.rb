@@ -5,7 +5,7 @@ class Report::BucketReportController < Report::BaseController
     @bucket = params[:bucket]
     @stats = BucketReportStats.new(entries)
 
-    @pagy, @candidates = pagy_nil_safe(params, entries, items: LIMIT)
+    @pagy, @candidates = pagy_nil_safe(params, entries, limit: LIMIT)
     render_partial("report/update_candidates/candidate", collection: @candidates, cached: false)
   end
 

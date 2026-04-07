@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "8.1.1"
+gem "rails", "8.1.3"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -55,7 +55,7 @@ end
 gem "aws-sdk-s3", "~> 1.151"
 gem "requestjs-rails"
 gem "rails-patterns"
-gem "pagy", "9.3.4"
+gem "pagy"
 gem "pundit"
 gem "redis"
 gem "csv"
@@ -81,5 +81,5 @@ group :test do
 end
 
 group :production do
-  gem "newrelic_rpm", "9.10.0"
+  gem "newrelic_rpm"
 end

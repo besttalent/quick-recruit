@@ -1,14 +1,15 @@
 class BaseController < ApplicationController
   before_action :authenticate_user!
 
-  include Pagy::Backend
+  include Pagy::Method
 
   LIMIT = 30
 
   def pagy_nil_safe(params, collection, vars = {})
-    pagy = Pagy.new(count: collection.count(:all), page: params[:page], **vars)
-    return pagy, collection.offset(pagy.offset).limit(pagy.limit) if collection.respond_to?(:offset)
-    return pagy, collection
+    return pagy(:offset, collection, page: params[:page], **vars) if collection.respond_to?(:offset)
+
+    pagy = Pagy::Offset.new(count: collection.size, page: params[:page], **Pagy::OPTIONS.merge(vars))
+    [pagy, collection]
   end
 
   def render_partial(partial, collection:, cached: false)

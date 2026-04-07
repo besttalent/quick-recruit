@@ -74,11 +74,11 @@ class CandidatesController < BaseController
   end
 
   def recent
-    @pagy, @candidates = pagy(candidates_for_bucket(:recent), items: LIMIT)
+    @pagy, @candidates = pagy(candidates_for_bucket(:recent), limit: LIMIT)
   end
 
   def nurture
-    @pagy, @candidates = pagy(candidates_for_bucket(:nurture), items: LIMIT)
+    @pagy, @candidates = pagy(candidates_for_bucket(:nurture), limit: LIMIT)
   end
 
   def hot
@@ -93,7 +93,7 @@ class CandidatesController < BaseController
     else
       candidates = Candidate.unscoped.where(bucket: :hot, owner: current_user).includes(:opening, :role, :owner, :user).order(bucket_updated_on: :desc)
     end
-    @pagy, @candidates = pagy(candidates, items: LIMIT)
+    @pagy, @candidates = pagy(candidates, limit: LIMIT)
   end
 
   def pipeline
@@ -108,14 +108,14 @@ class CandidatesController < BaseController
     else
       candidates = Candidate.unscoped.where(bucket: :pipeline, owner: current_user).includes(:opening, :owner).order(bucket_updated_on: :desc)
     end
-    @pagy, @candidates = pagy(candidates, items: LIMIT)
+    @pagy, @candidates = pagy(candidates, limit: LIMIT)
   end
 
   def champions
     candidates = nil
     candidates = Candidate.unscoped.where(bucket: :champions).includes(:opening, :owner).order(bucket_updated_on: :desc)
 
-    @pagy, @candidates = pagy(candidates, items: LIMIT)
+    @pagy, @candidates = pagy(candidates, limit: LIMIT)
   end
 
   def joinings
@@ -126,11 +126,11 @@ class CandidatesController < BaseController
       candidates = Candidate.unscoped.where(bucket: :joinings, owner: current_user).includes(:opening, :role, :owner).order(joining_date: :asc)
     end
 
-    @pagy, @candidates = pagy(candidates, items: LIMIT)
+    @pagy, @candidates = pagy(candidates, limit: LIMIT)
   end
 
   def icebox
-    @pagy, @candidates = pagy(candidates_for_bucket(:icebox), items: LIMIT)
+    @pagy, @candidates = pagy(candidates_for_bucket(:icebox), limit: LIMIT)
   end
 
   def archive
@@ -141,27 +141,27 @@ class CandidatesController < BaseController
       candidates = Candidate.unscoped.where(bucket: :archive, owner: current_user).includes(:opening, :owner).order(bucket_updated_on: :desc)
     end
 
-    @pagy, @candidates = pagy(candidates, items: LIMIT)
+    @pagy, @candidates = pagy(candidates, limit: LIMIT)
   end
 
   def incomplete
-    @pagy, @candidates = pagy(candidates_for_bucket(:incomplete), items: LIMIT)
+    @pagy, @candidates = pagy(candidates_for_bucket(:incomplete), limit: LIMIT)
   end
 
    def inbound
-    @pagy, @candidates = pagy(candidates_for_bucket(:inbound), items: LIMIT)
+    @pagy, @candidates = pagy(candidates_for_bucket(:inbound), limit: LIMIT)
   end
 
   def alumni
-    @pagy, @candidates = pagy(candidates_for_bucket(:alumni), items: LIMIT)
+    @pagy, @candidates = pagy(candidates_for_bucket(:alumni), limit: LIMIT)
   end
 
   def employees
-    @pagy, @candidates = pagy(candidates_for_bucket(:employees), items: LIMIT)
+    @pagy, @candidates = pagy(candidates_for_bucket(:employees), limit: LIMIT)
   end
 
   def contractors
-    @pagy, @candidates = pagy(candidates_for_bucket(:contractors), items: LIMIT)
+    @pagy, @candidates = pagy(candidates_for_bucket(:contractors), limit: LIMIT)
   end
 
   def leads
@@ -177,7 +177,7 @@ class CandidatesController < BaseController
       candidates = Candidate.unscoped.where(bucket: :leads, owner: current_user).includes(:opening, :owner, :user).order(created_at: :desc)
     end
 
-    @pagy, @candidates = pagy(candidates, items: LIMIT)
+    @pagy, @candidates = pagy(candidates, limit: LIMIT)
   end
 
   def settle_leads

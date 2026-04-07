@@ -1,7 +1,7 @@
 # Optionally override some pagy default with your own in the pagy initializer
-Pagy::DEFAULT[:limit] = 30 # items per page
+pagy_defaults = Pagy::DEFAULT.dup
+pagy_defaults[:limit] = 30 # items per page
+pagy_defaults[:size] = 20  # nav bar links
 
-Pagy::DEFAULT[:size] = 20  # nav bar links
-# Better user experience handled automatically
-require "pagy/extras/overflow"
-Pagy::DEFAULT[:overflow] = :last_page
+Pagy.send(:remove_const, :DEFAULT)
+Pagy.const_set(:DEFAULT, pagy_defaults.freeze)

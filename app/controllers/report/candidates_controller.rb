@@ -6,7 +6,7 @@ class Report::CandidatesController < Report::BaseController
     @roles = Role.all
     @openings = Opening.all
 
-    @pagy, @candidates = pagy_nil_safe(params, entries, items: LIMIT)
+    @pagy, @candidates = pagy_nil_safe(params, entries, limit: LIMIT)
     render_partial("report/candidates/candidate", collection: @candidates, cached: false)
   end
 
