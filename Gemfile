@@ -24,8 +24,6 @@ gem "stimulus-rails"
 # Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
 gem "tailwindcss-rails"
 
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.7"
@@ -45,7 +43,6 @@ gem "solid_queue"
 # A database-backed ActiveSupport::Cache::Store [https://github.com/rails/solid_cache]
 gem "solid_cache"
 
-gem "ostruct"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -54,7 +51,6 @@ end
 
 gem "aws-sdk-s3", "~> 1.151"
 gem "requestjs-rails"
-gem "rails-patterns"
 gem "pagy"
 gem "pundit"
 gem "redis"
@@ -65,9 +61,7 @@ group :development do
   gem "web-console"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  gem "memory_profiler"
   gem "rack-mini-profiler"
-  gem "stackprof"
   gem "letter_opener"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
