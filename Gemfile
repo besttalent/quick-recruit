@@ -53,7 +53,6 @@ gem "aws-sdk-s3", "~> 1.151"
 gem "requestjs-rails"
 gem "pagy"
 gem "pundit"
-gem "redis"
 gem "csv"
 
 group :development do
