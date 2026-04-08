@@ -2,6 +2,7 @@ module ApplicationHelper
   include AvatarHelper
   include ButtonHelper
   include AutoLinkHelper
+  include SvgHelper
 
   def tailwind_form_with(**options, &block)
     form_with(**options.merge(builder: TailwindFormBuilder), &block)
@@ -31,4 +32,5 @@ module ApplicationHelper
       path.prepend("https://")
     end
   end
+
 end
