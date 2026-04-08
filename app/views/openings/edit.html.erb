@@ -10,7 +10,7 @@
           <div><%= form.text_field :title, "Opening Name", required: true, placeholder: "eg. Android Developer" %></div>
 
           <div>
-            <label for="user-role" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">
+            <label for="opening_role_id" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">
               Primary skill
               <button
                 type="button"
@@ -37,14 +37,14 @@
             <%= form.collection_select(:role_id, @roles, :id, :title, { :prompt => "Select Primary Skill" }, :class => "form-text-field", :required => true) %>
           </div>
 
-          <div><label for="user-role" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">Select if Active</label><%= form.select(:active, [["Active", true], ["Inactive", false]], {}, :class => "form-text-field") %></div>
+          <div><label for="opening_active" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">Select if Active</label><%= form.select(:active, [["Active", true], ["Inactive", false]], {}, :class => "form-text-field") %></div>
 
           <div>
-            <label for="user-role" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">Priority</label>
-            <%= select_tag :priority, options_for_select(Opening.priorities.map { |k, v| [k.humanize.capitalize, k] }, @opening.priority), class: "form-text-field", :name => "opening[priority]" %>
+            <label for="opening_priority" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">Priority</label>
+            <%= select_tag :priority, options_for_select(Opening.priorities.map { |k, v| [k.humanize.capitalize, k] }, @opening.priority), class: "form-text-field", :name => "opening[priority]", id: "opening_priority" %>
           </div>
 
-          <div><label for="user-role" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">Owner</label><%= form.collection_select(:owner_id, User.owners, :id, :name, { :prompt => "Select Owner" }, :class => "form-text-field", :required => true) %></div>
+          <div><label for="opening_owner_id" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">Owner</label><%= form.collection_select(:owner_id, User.owners, :id, :name, { :prompt => "Select Owner" }, :class => "form-text-field", :required => true) %></div>
 
           <div><%= form.text_field :resume_screening_checklist, "Resume Screening Checklist (Optional)", required: false %></div>
 

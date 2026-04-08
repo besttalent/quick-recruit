@@ -9,25 +9,25 @@
           <%= form_with url: report_new_candidates_path, method: :get do |form| %>
             <main class="max-w-lg pt-6 pb-12 mx-auto space-y-4 lg:pb-16">
               <div>
-                <label for="created" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                <label for="created_by" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   Created By
                 </label>
                 <%= form.collection_select(:created_by, User.owners, :id, :name, { :prompt => "Select Created by ", :selected => (params["created_by"] if !params["created_by"].blank?) }, :class => "form-text-field") %>
               </div>
               <div>
-                <label for="date" class="block text-sm font-medium text-gray-700">
+                <label for="created_after_date" class="block text-sm font-medium text-gray-700">
                   Created After Date
                 </label>
                 <%= form.date_field :created_after_date, class: "form-text-field mt-1", value: params["created_after_date"].blank? ? (Date.today - 15.days).to_formatted_s(:db) : params["created_after_date"] %>
               </div>
               <div>
-                <label for="date" class="block text-sm font-medium text-gray-700">
+                <label for="created_before_date" class="block text-sm font-medium text-gray-700">
                   Created Before Date
                 </label>
                 <%= form.date_field :created_before_date, class: "form-text-field mt-1", value: params["created_before_date"].blank? ? (Date.today).to_formatted_s(:db) : params["created_before_date"] %>
               </div>
               <div>
-                <label for="opening" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                <label for="opening_id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   Job Association 
                 </label>
                 <%= form.collection_select(:opening_id, @openings.order(:title), :id, :title, { :prompt => "Select Associated With", :selected => (params["opening_id"] if !params["opening_id"].blank?) }, :class => "form-text-field") %>
@@ -39,13 +39,13 @@
                 <%= select_tag :bucket, options_for_select(Candidate.buckets.map { |k, v| [k.humanize.capitalize, k] }, (params["bucket"] unless params["bucket"].blank?)), class: "form-text-field", :name => "bucket", :prompt => "Select Bucket" %>
               </div>
               <div>
-                <label for="bucket" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                <label for="status" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   Current Status
                 </label>
                 <%= select_tag :status, options_for_select(Candidate.statuses.map { |k, v| [k.humanize.capitalize, k] }, (params["status"] unless params["status"].blank?)), class: "form-text-field", :name => "status", :prompt => "Select Status" %>
               </div>
               <div>
-                <label for="role" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                <label for="source_id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   Source
                 </label>
                 <%= form.collection_select(:source_id, @sources.order(:title), :id, :title, { :prompt => "Select Source", :selected => (params["source_id"] if !params["source_id"].blank?) }, :class => "form-text-field") %>

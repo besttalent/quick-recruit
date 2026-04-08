@@ -10,12 +10,12 @@
             <label class="block mb-2 text-sm text-gray-500 dark:text-white" for="file_input">Please upload CSV files only. Other file types will result in automatic rejection by our ATS. File should be less than 5 MB.</label>
 
             <div class="items-center w-full sm:flex">
-              <div class="w-full"><%= file_field_tag :file, accept: ".csv" %></div>
+              <div class="w-full"><%= file_field_tag :file, accept: ".csv", id: "file_input" %></div>
             </div>
           </div>
 
           <div>
-            <label for="user-role" class="inline-flex items-center mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            <label for="import_bucket" class="inline-flex items-center mb-2 text-sm font-medium text-gray-900 dark:text-white">
               Select which bucket to assign candidates to
               <button
                 type="button"
@@ -50,11 +50,11 @@
                 <div class="tooltip-arrow" data-popper-arrow></div>
               </div>
             </label>
-            <%= select_tag :bucket, options_for_select(Candidate.buckets.map { |k, v| [k.humanize.capitalize, k] }), class: "form-text-field", :name => "import[bucket]" %>
+            <%= select_tag :bucket, options_for_select(Candidate.buckets.map { |k, v| [k.humanize.capitalize, k] }), class: "form-text-field", :name => "import[bucket]", id: "import_bucket" %>
           </div>
 
           <div class="sm:col-span-2 mt-4 mb-4">
-            <label for="user-role" class="inline-flex items-center mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            <label for="import_opening_id" class="inline-flex items-center mb-2 text-sm font-medium text-gray-900 dark:text-white">
               Associate candidates with Job Opening
               <button
                 type="button"
@@ -89,11 +89,11 @@
                 <div class="tooltip-arrow" data-popper-arrow></div>
               </div>
             </label>
-            <%= select_tag :opening_id, options_for_select(Opening.all.order(:title).map { |k, v| [k.title, k.id] }), class: "form-text-field", :name => "import[opening_id]" %>
+            <%= select_tag :opening_id, options_for_select(Opening.all.order(:title).map { |k, v| [k.title, k.id] }), class: "form-text-field", :name => "import[opening_id]", id: "import_opening_id" %>
           </div>
 
           <div class="sm:col-span-2 mt-4 mb-4">
-            <label for="user-role" class="inline-flex items-center mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            <label for="import_style" class="inline-flex items-center mb-2 text-sm font-medium text-gray-900 dark:text-white">
               Select type of import
               <button
                 type="button"
@@ -128,7 +128,7 @@
                 <div class="tooltip-arrow" data-popper-arrow></div>
               </div>
             </label>
-            <%= select_tag :opening_id, options_for_select([["Import Naukri Outbound Leads", "ImportNaukriOutboundLeads"], ["Import Naukri Inbound Leads", "ImportNaukriInboundLeads"]]), class: "form-text-field", :name => "import[style]" %>
+            <%= select_tag :opening_id, options_for_select([["Import Naukri Outbound Leads", "ImportNaukriOutboundLeads"], ["Import Naukri Inbound Leads", "ImportNaukriInboundLeads"]]), class: "form-text-field", :name => "import[style]", id: "import_style" %>
           </div>
 
           <%= submit_tag "Import", class: "btn-primary" %>

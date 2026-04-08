@@ -11,7 +11,7 @@
       <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
         <div class="sm:col-span-2 space-y-2">
           <div>
-            <label for="user-role" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">
+            <label for="campaign_owner_id" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">
               Owner
             </label>
             <%= form.collection_select(:owner_id, @owners, :id, :name, { :prompt => "Select Owner" }, :class => "form-text-field", :required => true) %>
@@ -21,13 +21,13 @@
       <div class="mt-4 grid gap-4 sm:grid-cols-2 sm:gap-6">
 
         <div>
-          <label for="start_date" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">
+          <label for="campaign_start_date" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">
             Start Date
           </label>
           <%= form.date_field :start_date, class: "form-text-field" %>
         </div>
         <div>
-          <label for="end_date" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">
+          <label for="campaign_end_date" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">
             End Date
           </label>
           <%= form.date_field :end_date, class: "form-text-field" %>

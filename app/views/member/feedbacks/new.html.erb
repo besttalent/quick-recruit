@@ -9,10 +9,10 @@
     </div>
 
     <div class="mt-4">
-          <label for="user-role" class="inline-flex items-center mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          <label for="feedback_nature" class="inline-flex items-center mb-2 text-sm font-medium text-gray-900 dark:text-white">
             Feedback Nature
           </label>
-          <%= select_tag :nature, options_for_select(Feedback.natures.map { |k, v| [k.humanize.capitalize, k] }), class: "form-text-field", :name => "feedback[nature]" %>  
+          <%= select_tag :nature, options_for_select(Feedback.natures.map { |k, v| [k.humanize.capitalize, k] }), class: "form-text-field", :name => "feedback[nature]", id: "feedback_nature" %>  
         </div>
 
     <div class="field mt-8">

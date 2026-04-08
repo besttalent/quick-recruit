@@ -11,7 +11,7 @@
         <div><%= form.text_field :email, "Email", required: true %></div>
 
         <div>
-          <label for="user-role" class="inline-flex items-center mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          <label for="user_role" class="inline-flex items-center mb-2 text-sm font-medium text-gray-900 dark:text-white">
             User Role
             <button
               type="button"
@@ -35,7 +35,7 @@
               <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
           </label>
-          <%= select_tag :bucket, options_for_select(User.roles.map { |k, v| [k.humanize.capitalize, k] }), class: "form-text-field", :name => "user[role]" %>
+          <%= select_tag :bucket, options_for_select(User.roles.map { |k, v| [k.humanize.capitalize, k] }), class: "form-text-field", :name => "user[role]", id: "user_role" %>
         </div>
 
         <div><%= form.password_field :password, "New Password", required: true %></div>
