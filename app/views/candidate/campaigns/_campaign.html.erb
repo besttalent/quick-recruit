@@ -4,21 +4,26 @@
       <div class="text-sm font-semibold"><%= campaign.name %></div>
     </div>
   </th>
+
   <td class="px-4 py-2">
     <%= display_date(campaign.start_date) %> - <%= display_date(campaign.end_date) %>
   </td>
+
   <td class="px-4 py-2">
     <%= campaign.owner.name %>
   </td>
+
   <td class="px-4 py-2">
     <div class="flex items-center">
       <% if campaign.active? %>
-        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
-        Active
-      </div>
-    <% else %>
-      <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div>
-      Inactive
-    <% end %>
+        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2">
+          Active
+        </div>
+      <% else %>
+        <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2">
+          Inactive
+        </div>
+      <% end %>
+    </div>
   </td>
 </tr>
