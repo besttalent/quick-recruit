@@ -7,6 +7,7 @@
             <h1 class="mr-3 text-lg font-semibold dark:text-white">Hot Candidates</h1>
             <p class="text-gray-500 dark:text-gray-400 text-sm">Following <span class="font-bold"><%= @candidates.count %></span> candidates are active and looking for job change and should be porcessed as soon as possible.</p>
           </div>
+
           <a type="button" href="/candidates/new" class="btn-primary">Add new candidate</a>
         </div>
       </div>
@@ -16,6 +17,7 @@
           <div class="items-center hidden mt-3 mr-4 text-sm font-medium text-gray-900 md:flex dark:text-white">
             Show records only for:
           </div>
+
           <div class="flex flex-wrap">
             <% @recruiters.each do |recruiter| %>
               <a href="<%= hot_candidates_path(recruiter: recruiter.id) %>">
@@ -38,12 +40,14 @@
                       class="radio"
                     >
                   <% end %>
+
                   <label for="all-products" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"><%= recruiter.name %></label>
                 </div>
               </a>
             <% end %>
+
             <% unless params[:recruiter].nil? %>
-              <%= link_to "Show All", hot_candidates_path, class: "underline mt-3 mr-4 font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm" %>
+              <%= link_to "Show All", hot_candidates_path, class: "underline mt-3 mr-4 link" %>
             <% end %>
           </div>
         </div>
@@ -61,6 +65,7 @@
               <th scope="col" class="px-4 py-3 whitespace-nowrap">Added On</th>
             </tr>
           </thead>
+
           <tbody><%= render partial: "hot", collection: @candidates, as: :candidate %></tbody>
         </table>
       </div>

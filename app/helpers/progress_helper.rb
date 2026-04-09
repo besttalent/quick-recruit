@@ -42,7 +42,7 @@ module ProgressHelper
     Candidate.where(opening: opening.id).reorder("").group(:bucket).count.sort_by { |key, value| value }.each do |bucket, count|
       bucket_name = bucket.humanize
       association_count = count
-      display_opening_associations << "<a class='font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm' href='/report/candidates?opening_id=#{opening.id}&bucket=#{bucket}'>#{association_count.to_s} #{bucket_name}</a>"
+      display_opening_associations << "<a class='link' href='/report/candidates?opening_id=#{opening.id}&bucket=#{bucket}'>#{association_count.to_s} #{bucket_name}</a>"
     end
     display_opening_associations.html_safe
   end
@@ -52,7 +52,7 @@ module ProgressHelper
     Candidate.where(owner: owner.id).reorder("").group(:bucket).count.sort_by { |key, value| value }.each do |bucket, count|
       bucket_name = bucket.humanize
       association_count = count
-      display_owner_associations << "<a class='font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm' href='/report/candidates?owner_id=#{owner.id}&bucket=#{bucket}'>#{association_count.to_s} #{bucket_name}</a>"
+      display_owner_associations << "<a class='link' href='/report/candidates?owner_id=#{owner.id}&bucket=#{bucket}'>#{association_count.to_s} #{bucket_name}</a>"
     end
     display_owner_associations.html_safe
   end

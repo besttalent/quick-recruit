@@ -121,3 +121,7 @@
 .sort-asc {
   border-bottom: 8px solid #808080;
 }
+
+.link {
+  @apply font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm cursor-pointer;
+}

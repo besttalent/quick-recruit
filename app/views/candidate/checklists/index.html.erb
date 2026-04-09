@@ -16,6 +16,7 @@
     <div class="flex-1">
       <!-- Main area -->
       <%= render partial: "candidate/nav", locals: { candidate: @candidate } %>
+
       <div class="relative overflow-x-auto">
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
           <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -23,20 +24,25 @@
               <th scope="col" class="px-4 py-2">
                 Checklist
               </th>
+
               <th scope="col" class="px-4 py-2">
                 Added by
               </th>
+
               <th scope="col" class="px-4 py-2">
                 Added On
               </th>
+
               <th scope="col" class="px-4 py-2">
                 Status
               </th>
+
               <th scope="col" class="px-4 py-2">
                 Action
               </th>
             </tr>
           </thead>
+
           <tbody></tbody>
         </table>
       </div>
@@ -45,6 +51,7 @@
     <div class="shrink-0 border-t border-gray-200 px-4 py-4 sm:px-6 lg:w-80 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6">
       <!-- Right column area -->
       <% opening = @candidate.opening %>
+
       <% unless opening.nil? %>
         <div>
           <h5 class="mr-3 font-semibold dark:text-white">Complete A Survey</h5>
@@ -53,23 +60,23 @@
 
           <div class="flex flex-col">
             <% unless opening.resume_screening_checklist.blank? %>
-              <%= link_to "Resume Screening Checklist", "#{opening.resume_screening_checklist}?name=#{@candidate.name}&email=#{@candidate.email}", target: "_blank", class: "font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm" %>
+              <%= link_to "Resume Screening Checklist", "#{opening.resume_screening_checklist}?name=#{@candidate.name}&email=#{@candidate.email}", target: "_blank", class: "link" %>
             <% end %>
 
             <% unless opening.telephonic_screening_checklist.blank? %>
-              <%= link_to "Telephonic Screening Checklist", "#{opening.telephonic_screening_checklist}?name=#{@candidate.name}&email=#{@candidate.email}", target: "_blank", class: "font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm" %>
+              <%= link_to "Telephonic Screening Checklist", "#{opening.telephonic_screening_checklist}?name=#{@candidate.name}&email=#{@candidate.email}", target: "_blank", class: "link" %>
             <% end %>
 
             <% unless opening.first_round_score.blank? %>
-              <%= link_to "First Round Score", "#{opening.first_round_score}?name=#{@candidate.name}&email=#{@candidate.email}", target: "_blank", class: "font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm" %>
+              <%= link_to "First Round Score", "#{opening.first_round_score}?name=#{@candidate.name}&email=#{@candidate.email}", target: "_blank", class: "link" %>
             <% end %>
 
             <% unless opening.second_round_score.blank? %>
-              <%= link_to "Second Round Score", "#{opening.second_round_score}?name=#{@candidate.name}&email=#{@candidate.email}", target: "_blank", class: "font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm" %>
+              <%= link_to "Second Round Score", "#{opening.second_round_score}?name=#{@candidate.name}&email=#{@candidate.email}", target: "_blank", class: "link" %>
             <% end %>
 
             <% unless opening.hr_round_score.blank? %>
-              <%= link_to "HR Round Score", "#{opening.hr_round_score}?name=#{@candidate.name}&email=#{@candidate.email}", target: "_blank", class: "font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm" %>
+              <%= link_to "HR Round Score", "#{opening.hr_round_score}?name=#{@candidate.name}&email=#{@candidate.email}", target: "_blank", class: "link" %>
             <% end %>
           </div>
         </div>

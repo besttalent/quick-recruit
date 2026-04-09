@@ -56,31 +56,31 @@
 
           <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Select which email you want to send to the candidate.</p>
 
-          <%= button_to "About Us & Job Description Email", candidate_emails_path(@candidate, kind: "about_us_and_jd_email"), class: "font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm", data: {
+          <%= button_to "About Us & Job Description Email", candidate_emails_path(@candidate, kind: "about_us_and_jd_email"), class: "link", data: {
                                                                                                                                 controller: "confirmation",
                                                                                                                                 "confirmation-message-value": "Are you sure you want to send Company Profile & JD email to this candidate?",
                                                                                                                                 action: "confirmation#confirm",
                                                                                                                               } %>
 
-          <%= button_to "About Us Email", candidate_emails_path(@candidate, kind: "about_us_email"), class: "font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm", data: {
+          <%= button_to "About Us Email", candidate_emails_path(@candidate, kind: "about_us_email"), class: "link", data: {
                                                                                                        controller: "confirmation",
                                                                                                        "confirmation-message-value": "Are you sure you want to send Company Profile email to this candidate?",
                                                                                                        action: "confirmation#confirm",
                                                                                                      } %>
 
-          <%= button_to "Job Description Email", candidate_emails_path(@candidate, kind: "job_description_email"), class: "font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm", data: {
+          <%= button_to "Job Description Email", candidate_emails_path(@candidate, kind: "job_description_email"), class: "link", data: {
                                                                                                                      controller: "confirmation",
                                                                                                                      "confirmation-message-value": "Are you sure you want to send Job Description email to this candidate?",
                                                                                                                      action: "confirmation#confirm",
                                                                                                                    } %>
 
-          <%= button_to "F2F Interview Details Email", candidate_emails_path(@candidate, kind: "f2f_detail_email"), class: "font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm", data: {
+          <%= button_to "F2F Interview Details Email", candidate_emails_path(@candidate, kind: "f2f_detail_email"), class: "link", data: {
                                                                                                                       controller: "confirmation",
                                                                                                                       "confirmation-message-value": "Are you sure you want to send details for Face to Face round to this candidate?",
                                                                                                                       action: "confirmation#confirm",
                                                                                                                     } %>
 
-          <%= button_to "Please send resume Email", candidate_emails_path(@candidate, kind: "send_resume_email"), class: "font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm", data: {
+          <%= button_to "Please send resume Email", candidate_emails_path(@candidate, kind: "send_resume_email"), class: "link", data: {
                                                                                                                     controller: "confirmation",
                                                                                                                     "confirmation-message-value": "Are you sure you want to ask this candidate to send resume?",
                                                                                                                     action: "confirmation#confirm",
