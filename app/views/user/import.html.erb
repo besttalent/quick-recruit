@@ -27,10 +27,7 @@
                 <%= svg_icon("info-circle", class_name: "w-4 h-4 text-gray-400 hover:text-gray-900 dark:hover:text-white dark:text-gray-500") %>
                 <span class="sr-only">Show information</span>
               </button>
-              <div id="tooltip-user-bucket" role="tooltip" class="inline-block absolute invisible z-10 py-1 px-2 max-w-sm text-xs font-normal text-white bg-gray-900 rounded-xs shadow-xs opacity-0 tooltip dark:bg-gray-700">
-                In which bucket you want to these candidates after import.
-                <div class="tooltip-arrow" data-popper-arrow></div>
-              </div>
+              <%= tooltip_component(id: "tooltip-user-bucket", text: "In which bucket you want to these candidates after import.", class_name: "max-w-sm font-normal") %>
             </label>
 
             <%= select_tag :bucket, options_for_select(Candidate.buckets.map { |k, v| [k.humanize.capitalize, k] }), class: "form-text-field", :name => "import[bucket]", id: "import_bucket" %>
@@ -48,10 +45,7 @@
                 <%= svg_icon("info-circle", class_name: "w-4 h-4 text-gray-400 hover:text-gray-900 dark:hover:text-white dark:text-gray-500") %>
                 <span class="sr-only">Show information</span>
               </button>
-              <div id="tooltip-user-opening" role="tooltip" class="inline-block absolute invisible z-10 py-1 px-2 max-w-sm text-xs font-normal text-white bg-gray-900 rounded-xs shadow-xs opacity-0 tooltip dark:bg-gray-700">
-                With which job opening you would like to Associate these candidates.
-                <div class="tooltip-arrow" data-popper-arrow></div>
-              </div>
+              <%= tooltip_component(id: "tooltip-user-opening", text: "With which job opening you would like to Associate these candidates.", class_name: "max-w-sm font-normal") %>
             </label>
 
             <%= select_tag :opening_id, options_for_select(Opening.all.order(:title).map { |k, v| [k.title, k.id] }), class: "form-text-field", :name => "import[opening_id]", id: "import_opening_id" %>
@@ -69,10 +63,7 @@
                 <%= svg_icon("info-circle", class_name: "w-4 h-4 text-gray-400 hover:text-gray-900 dark:hover:text-white dark:text-gray-500") %>
                 <span class="sr-only">Show information</span>
               </button>
-              <div id="tooltip-import-nature" role="tooltip" class="inline-block absolute invisible z-10 py-1 px-2 max-w-sm text-xs font-normal text-white bg-gray-900 rounded-xs shadow-xs opacity-0 tooltip dark:bg-gray-700">
-                Please select what type of data you are importing.
-                <div class="tooltip-arrow" data-popper-arrow></div>
-              </div>
+              <%= tooltip_component(id: "tooltip-import-nature", text: "Please select what type of data you are importing.", class_name: "max-w-sm font-normal") %>
             </label>
 
             <%= select_tag :opening_id, options_for_select([["Import Naukri Outbound Leads", "ImportNaukriOutboundLeads"], ["Import Naukri Inbound Leads", "ImportNaukriInboundLeads"]]), class: "form-text-field", :name => "import[style]", id: "import_style" %>

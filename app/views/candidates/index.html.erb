@@ -15,10 +15,7 @@
   <ul role="list" class="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
     <li class="col-span-1 flex rounded-xs shadow-xs">
       <button data-tooltip-target="tooltip-hot" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-red-500 rounded-l-md text-sm font-medium text-white">A</button>
-      <div id="tooltip-hot" role="tooltip" class="max-w-sm absolute z-10 invisible inline-block px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-xs shadow-xs opacity-0 tooltip dark:bg-gray-700">
-        This bucket contains those candidates which we need to look and decide when to process.
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-hot", text: "This bucket contains those candidates which we need to look and decide when to process.", class_name: "max-w-sm") %>
       <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
         <div class="flex-1 truncate px-4 py-2 text-sm">
           <a href="/candidates/hot" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Hot</a>
@@ -28,10 +25,7 @@
     </li>
     <li class="col-span-1 flex rounded-xs shadow-xs">
       <button data-tooltip-target="tooltip-pipeline" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-yellow-500 rounded-l-md text-sm font-medium text-white">B</button>
-      <div id="tooltip-pipeline" role="tooltip" class="max-w-sm absolute z-10 invisible inline-block px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-xs shadow-xs opacity-0 tooltip dark:bg-gray-700">
-        This bucket contains those candidates which are currently in our pipeline under various sprints.
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-pipeline", text: "This bucket contains those candidates which are currently in our pipeline under various sprints.", class_name: "max-w-sm") %>
       <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
         <div class="flex-1 truncate px-4 py-2 text-sm">
           <a href="/candidates/pipeline" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Pipeline</a>
@@ -41,10 +35,7 @@
     </li>
     <li class="col-span-1 flex rounded-xs shadow-xs">
       <button data-tooltip-target="tooltip-champions" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-green-500 rounded-l-md text-sm font-medium text-white">C</button>
-      <div id="tooltip-champions" role="tooltip" class="max-w-sm absolute z-10 invisible inline-block px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-xs shadow-xs opacity-0 tooltip dark:bg-gray-700">
-        This bucket contains those candidates which cleared our process but did not join us and we might consider them in future.
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-champions", text: "This bucket contains those candidates which cleared our process but did not join us and we might consider them in future.", class_name: "max-w-sm") %>
       <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
         <div class="flex-1 truncate px-4 py-2 text-sm">
           <a href="/candidates/champions" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Champions</a>
@@ -54,10 +45,7 @@
     </li>
     <li class="col-span-1 flex rounded-xs shadow-xs">
       <button data-tooltip-target="tooltip-employees" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-gray-500 rounded-l-md text-sm font-medium text-white">D</button>
-      <div id="tooltip-employees" role="tooltip" class="max-w-sm absolute z-10 invisible inline-block px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-xs shadow-xs opacity-0 tooltip dark:bg-gray-700">
-        This bucket contains those candidates who are currently part of us.
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-employees", text: "This bucket contains those candidates who are currently part of us.", class_name: "max-w-sm") %>
       <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
         <div class="flex-1 truncate px-4 py-2 text-sm">
           <a href="/candidates/employees" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Employees</a>
@@ -69,10 +57,7 @@
   <ul role="list" class="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
     <li class="col-span-1 flex rounded-xs shadow-xs">
       <button data-tooltip-target="tooltip-leads" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-red-500 rounded-l-md text-sm font-medium text-white">E</button>
-      <div id="tooltip-leads" role="tooltip" class="max-w-sm absolute z-10 invisible inline-block px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-xs shadow-xs opacity-0 tooltip dark:bg-gray-700">
-        This bucket contains those leads which were collected from our career portal.
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-leads", text: "This bucket contains those leads which were collected from our career portal.", class_name: "max-w-sm") %>
       <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
         <div class="flex-1 truncate px-4 py-2 text-sm">
           <a href="/candidates/leads" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Leads</a>
@@ -82,10 +67,7 @@
     </li>
     <li class="col-span-1 flex rounded-xs shadow-xs">
       <button data-tooltip-target="tooltip-new" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-yellow-500 rounded-l-md text-sm font-medium text-white">F</button>
-      <div id="tooltip-new" role="tooltip" class="max-w-sm absolute z-10 invisible inline-block px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-xs shadow-xs opacity-0 tooltip dark:bg-gray-700">
-        This bucket contains newly added candidates and need review.
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-new", text: "This bucket contains newly added candidates and need review.", class_name: "max-w-sm") %>
       <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
         <div class="flex-1 truncate px-4 py-2 text-sm">
           <a href="/candidates/recent" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Recent</a>
@@ -95,10 +77,7 @@
     </li>
     <li class="col-span-1 flex rounded-xs shadow-xs">
       <button data-tooltip-target="tooltip-alumni" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-green-500 rounded-l-md text-sm font-medium text-white">G</button>
-      <div id="tooltip-alumni" role="tooltip" class="max-w-sm absolute z-10 invisible inline-block px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-xs shadow-xs opacity-0 tooltip dark:bg-gray-700">
-        This bucket contains those candidates who are no longer with us.
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-alumni", text: "This bucket contains those candidates who are no longer with us.", class_name: "max-w-sm") %>
       <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
         <div class="flex-1 truncate px-4 py-2 text-sm">
           <a href="/candidates/alumni" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Alumni</a>
@@ -108,10 +87,7 @@
     </li>
     <li class="col-span-1 flex rounded-xs shadow-xs">
       <button data-tooltip-target="tooltip-contractors" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-gray-500 rounded-l-md text-sm font-medium text-white">H</button>
-      <div id="tooltip-contractors" role="tooltip" class="max-w-sm absolute z-10 invisible inline-block px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-xs shadow-xs opacity-0 tooltip dark:bg-gray-700">
-        This bucket contains those candidates which have worked with us as contractors in past.
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-contractors", text: "This bucket contains those candidates which have worked with us as contractors in past.", class_name: "max-w-sm") %>
       <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
         <div class="flex-1 truncate px-4 py-2 text-sm">
           <a href="/candidates/contractors" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Contractors</a>
@@ -123,10 +99,7 @@
   <ul role="list" class="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
     <li class="col-span-1 flex rounded-xs shadow-xs">
       <button data-tooltip-target="tooltip-incomplete" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-red-500 rounded-l-md text-sm font-medium text-white">I</button>
-      <div id="tooltip-incomplete" role="tooltip" class="max-w-sm absolute z-10 invisible inline-block px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-xs shadow-xs opacity-0 tooltip dark:bg-gray-700">
-        This bucket contains those candidates for which we do not have enough data.
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-incomplete", text: "This bucket contains those candidates for which we do not have enough data.", class_name: "max-w-sm") %>
       <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
         <div class="flex-1 truncate px-4 py-2 text-sm">
           <a href="/candidates/incomplete" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Incomplete</a>
@@ -136,10 +109,7 @@
     </li>
     <li class="col-span-1 flex rounded-xs shadow-xs">
       <button data-tooltip-target="tooltip-joinings" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-yellow-500 rounded-l-md text-sm font-medium text-white">J</button>
-      <div id="tooltip-joinings" role="tooltip" class="max-w-sm absolute z-10 invisible inline-block px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-xs shadow-xs opacity-0 tooltip dark:bg-gray-700">
-        This bucket contains those candidates which are joining in next few days.
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-joinings", text: "This bucket contains those candidates which are joining in next few days.", class_name: "max-w-sm") %>
       <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
         <div class="flex-1 truncate px-4 py-2 text-sm">
           <a href="/candidates/joinings" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Joinings</a>
@@ -149,10 +119,7 @@
     </li>
     <li class="col-span-1 flex rounded-xs shadow-xs">
       <button data-tooltip-target="tooltip-icebox" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-green-500 rounded-l-md text-sm font-medium text-white">K</button>
-      <div id="tooltip-icebox" role="tooltip" class="max-w-sm max-w-sm absolute z-10 invisible inline-block px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-xs shadow-xs opacity-0 tooltip dark:bg-gray-700">
-        This bucket contains those candidate which should be followed up with after some time.
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-icebox", text: "This bucket contains those candidate which should be followed up with after some time.", class_name: "max-w-sm") %>
       <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
         <div class="flex-1 truncate px-4 py-2 text-sm">
           <a href="/candidates/icebox" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Icebox</a>
@@ -162,10 +129,7 @@
     </li>
     <li class="col-span-1 flex rounded-xs shadow-xs">
       <button data-tooltip-target="tooltip-archived" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-gray-500 rounded-l-md text-sm font-medium text-white">L</button>
-      <div id="tooltip-archived" role="tooltip" class="max-w-sm absolute z-10 invisible inline-block px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-xs shadow-xs opacity-0 tooltip dark:bg-gray-700">
-        This bucket contains those candidates which are not fit for us and we might not consider in future as well.
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-archived", text: "This bucket contains those candidates which are not fit for us and we might not consider in future as well.", class_name: "max-w-sm") %>
       <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
         <div class="flex-1 truncate px-4 py-2 text-sm">
           <a href="/candidates/archive" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Archive</a>
@@ -177,10 +141,7 @@
   <ul role="list" class="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
     <li class="col-span-1 flex rounded-xs shadow-xs">
       <button data-tooltip-target="tooltip-nurture" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-red-500 rounded-l-md text-sm font-medium text-white">M</button>
-      <div id="tooltip-nurture" role="tooltip" class="max-w-sm absolute z-10 invisible inline-block px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-xs shadow-xs opacity-0 tooltip dark:bg-gray-700">
-        This bucket contains those candidates which we need to nurture.
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-nurture", text: "This bucket contains those candidates which we need to nurture.", class_name: "max-w-sm") %>
       <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
         <div class="flex-1 truncate px-4 py-2 text-sm">
           <a href="/candidates/nurture" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Nurture</a>
@@ -190,10 +151,7 @@
     </li>
         <li class="col-span-1 flex rounded-xs shadow-xs">
       <button data-tooltip-target="tooltip-inbound" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-yellow-500 rounded-l-md text-sm font-medium text-white">N</button>
-      <div id="tooltip-inbound" role="tooltip" class="max-w-sm absolute z-10 invisible inline-block px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-xs shadow-xs opacity-0 tooltip dark:bg-gray-700">
-        This bucket contains those candidates which we received through inbound channels.
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-inbound", text: "This bucket contains those candidates which we received through inbound channels.", class_name: "max-w-sm") %>
       <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white">
         <div class="flex-1 truncate px-4 py-2 text-sm">
           <a href="/candidates/inbound" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Inbound</a>

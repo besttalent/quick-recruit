@@ -9,10 +9,7 @@
               <%= svg_icon("edit-pencil", class_name: "w-4 h-4 text-gray-800 dark:text-white") %>
             </a>
           </div>
-          <div id="tooltip-joining" role="tooltip" class="inline-block text-xs absolute invisible z-10 py-1 px-2 text-xs font-medium text-white bg-gray-900 rounded-xs shadow-xs opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
-            Edit Joining Date
-            <div class="tooltip-arrow" data-popper-arrow></div>
-          </div>
+          <%= tooltip_component(id: "tooltip-joining", text: "Edit Joining Date") %>
         <% end %>
       </div>
       <dd class="mb-4 sm:mb-5"><span class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2 py-0.5 rounded-sm">Joining On: <%= display_date(candidate.joining_date) %></span></dd>

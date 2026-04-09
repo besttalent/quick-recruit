@@ -15,10 +15,7 @@
   <dd class="mb-4 sm:mb-5"><span class="bg-<%= status_color(candidate.status) %>-100 text-<%= status_color(candidate.status) %>-800 text-xs font-medium inline-flex items-center px-2 py-0.5 rounded-sm"><%= candidate.status.titleize %></span></dd>
 
   <% if policy(candidate).update_status? %>
-    <div id="tooltip-status" role="tooltip" class="inline-block text-xs absolute invisible z-10 py-1 px-2 text-xs font-medium text-white bg-gray-900 rounded-xs shadow-xs opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
-      Edit status
-      <div class="tooltip-arrow" data-popper-arrow></div>
-    </div>
+    <%= tooltip_component(id: "tooltip-status", text: "Edit status") %>
     <!-- Dropdown menu -->
     <div id="statusMenu" data-status-target="menu" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-sm border border-gray-200 shadow-sm shadow-lg w-60 dark:bg-gray-700 dark:divide-gray-600">
       <ul class="p-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="changeStatusButton">

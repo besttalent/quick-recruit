@@ -5,5 +5,13 @@ import 'flowbite'
 import "@rails/request.js"
 
 
+const reinitializeFlowbite = () => {
+    if (window.initFlowbite) window.initFlowbite()
+}
+
+document.addEventListener("turbo:load", reinitializeFlowbite)
+document.addEventListener("turbo:frame-load", reinitializeFlowbite)
+
+
 import "trix"
 import "@rails/actiontext"

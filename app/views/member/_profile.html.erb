@@ -9,10 +9,7 @@
           <a href="<%= edit_member_path(member) %>" data-tooltip-target="tooltip-edit" class="p-1 ml-1 text-gray-500 rounded-xs hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700"><%= svg_icon("profile-edit", class_name: "w-5 h-5") %><span class="sr-only">Edit Profile</span></a>
         </h4>
 
-        <div id="tooltip-edit" role="tooltip" class="inline-block text-xs absolute invisible z-10 py-1 px-2 text-xs font-medium text-white bg-gray-900 rounded-xs shadow-xs opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
-          Edit profile
-          <div class="tooltip-arrow" data-popper-arrow></div>
-        </div>
+        <%= tooltip_component(id: "tooltip-edit", text: "Edit profile") %>
 
         <div class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
           <%= svg_icon("email", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>

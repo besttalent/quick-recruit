@@ -13,10 +13,7 @@
         <%= svg_icon("github-logo", class_name: "w-5 h-5") %>
         <span class="sr-only">GitHub</span>
       </a>
-      <div id="tooltip-github" role="tooltip" class="inline-block text-xs absolute invisible z-10 py-1 px-2 text-xs font-medium text-white bg-gray-900 rounded-xs shadow-xs opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
-        GitHub profile
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-github", text: "GitHub profile") %>
     <% end %>
 
     <% if candidate.twitter.present? %>
@@ -29,10 +26,7 @@
         <%= svg_icon("twitter-logo", class_name: "w-5 h-5") %>
         <span class="sr-only">Twitter</span>
       </a>
-      <div id="tooltip-twitter" role="tooltip" class="inline-block text-xs absolute invisible z-10 py-1 px-2 text-xs font-medium text-white bg-gray-900 rounded-xs shadow-xs opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
-        Twitter profile
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-twitter", text: "Twitter profile") %>
     <% end %>
 
     <% if candidate.portfolio.present? %>
@@ -45,10 +39,7 @@
         <%= svg_icon("globe", class_name: "w-5 h-5") %>
         <span class="sr-only">Portfolio</span>
       </a>
-      <div id="tooltip-portfolio" role="tooltip" class="inline-block text-xs absolute invisible z-10 py-1 px-2 text-xs font-medium text-white bg-gray-900 rounded-xs shadow-xs opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
-        Portfolio or Website
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-portfolio", text: "Portfolio or Website") %>
     <% end %>
 
     <% if candidate.linkedin.present? %>
@@ -61,10 +52,7 @@
         <%= svg_icon("linkedin-logo", class_name: "w-5 h-5") %>
         <span class="sr-only">Linkedin</span>
       </a>
-      <div id="tooltip-linkedin" role="tooltip" class="inline-block text-xs absolute invisible z-10 py-1 px-2 text-xs font-medium text-white bg-gray-900 rounded-xs shadow-xs opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
-        Linkedin profile
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-linkedin", text: "Linkedin profile") %>
     <% end %>
 
     <% if candidate.respond_to?(:booking_url) && candidate.booking_url.present? %>
@@ -78,10 +66,7 @@
 
         <span class="sr-only">Meeting Booking URL</span>
       </a>
-      <div id="tooltip-booking" role="tooltip" class="inline-block text-xs absolute invisible z-10 py-1 px-2 text-xs font-medium text-white bg-gray-900 rounded-xs shadow-xs opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
-        Meeting Booking URL
-        <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+      <%= tooltip_component(id: "tooltip-booking", text: "Meeting Booking URL") %>
     <% end %>
   </dd>
 <% end %>

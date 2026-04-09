@@ -125,3 +125,7 @@
 .link {
   @apply font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm cursor-pointer;
 }
+
+.tooltip {
+  @apply inline-block absolute z-10 py-1 px-2 text-xs font-medium text-white bg-gray-900 rounded-xs shadow-xs transition-opacity duration-300 dark:bg-gray-700;
+}
