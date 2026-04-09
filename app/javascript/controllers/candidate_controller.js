@@ -2,44 +2,37 @@ import { Controller } from "@hotwired/stimulus"
 import { FetchRequest } from "@rails/request.js"
 
 export default class extends Controller {
-    static targets = ['menu']
-    connect() {
-    }
-
-
     async update_owner({ params }) {
-        const request = new FetchRequest('patch', `/candidates/${params.candidate}/update/owner`, {
-            body: JSON.stringify({ owner_id: params.owner }), responseKind: 'turbo-stream'
-        })
-        const response = await request.perform()
+        return this.patchCandidate(params.candidate, "update/owner", { owner_id: params.owner })
     }
 
     async update_bucket({ params }) {
-        const request = new FetchRequest('patch', `/candidates/${params.candidate}/update/bucket`, {
-            body: JSON.stringify({ bucket: params.bucket }), responseKind: 'turbo-stream'
-        })
-        const response = await request.perform()
+        return this.patchCandidate(params.candidate, "update/bucket", { bucket: params.bucket })
     }
 
     async update_status({ params }) {
-        const request = new FetchRequest('patch', `/candidates/${params.candidate}/update/status`, {
-            body: JSON.stringify({ status: params.status }), responseKind: 'turbo-stream'
-        })
-        const response = await request.perform()
+        return this.patchCandidate(params.candidate, "update/status", { status: params.status })
     }
 
     async update_campaign({ params }) {
-        const request = new FetchRequest('patch', `/candidates/${params.candidate}/update/campaign`, {
-            body: JSON.stringify({ campaign_id: params.campaign }), responseKind: 'turbo-stream'
-        })
-        const response = await request.perform()
+        return this.patchCandidate(params.candidate, "update/campaign", { campaign_id: params.campaign })
     }
 
     async toggle_recycle({ params }) {
-        const request = new FetchRequest('patch', `/candidates/${params.candidate}/toggle/recycle`, {
-            body: JSON.stringify({ status: params.candidate }), responseKind: 'turbo-stream'
+        return this.patchCandidate(params.candidate, "toggle/recycle", { status: params.candidate })
+    }
+
+    async patchCandidate(candidateId, path, payload) {
+        const request = new FetchRequest("patch", `/candidates/${candidateId}/${path}`, {
+            body: JSON.stringify(payload),
+            responseKind: "turbo-stream",
         })
-        const response = await request.perform()
+
+        try {
+            await request.perform()
+        } catch (error) {
+            console.error(`Candidate request failed: ${path}`, error)
+        }
     }
 
 }

@@ -1,6 +1,7 @@
-<div id="<%= dom_id(candidate) %>" data-controller="bucket">
+<div id="<%= dom_id(candidate) %>" data-controller="candidate">
   <div class="flex items-center">
     <dt class="font-semibold text-sm leading-none text-gray-900 dark:text-white">Bucket</dt>
+
     <% if policy(candidate).update_bucket? %>
       <div
         id="dropdownDefaultButton"
@@ -12,6 +13,7 @@
       </div>
     <% end %>
   </div>
+
   <dd class="mb-4 sm:mb-5">
     <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2 py-0.5 rounded-sm dark:bg-primary-200 dark:text-primary-800 hover:underline cursor-pointer"><a href="<%= "/candidates/#{candidate.bucket}" %>"><%= candidate.bucket.titleize %></a></span>
   </dd>
@@ -19,18 +21,23 @@
   <% if policy(candidate).update_bucket? %>
     <%= tooltip_component(id: "tooltip-bucket", text: "Edit Bucket") %>
     <!-- Dropdown menu -->
-    <div id="dropdownDefaultRadio" data-bucket-target="menu" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-sm border border-gray-200 shadow-sm w-40 dark:bg-gray-700 dark:divide-gray-600">
+    <div id="dropdownDefaultRadio" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-sm border border-gray-200 shadow-sm w-40 dark:bg-gray-700 dark:divide-gray-600">
       <ul class="p-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
         <% buckets = current_user.admin_or_recruiter_admin? ? Candidate.buckets : Candidate.buckets.except(:pipeline) %>
+
         <% buckets.each do |k, v| %>
           <li
             class="cursor-pointer"
-            data-action="click->bucket#change"
-            data-bucket-bucket-param="<%= v %>"
-            data-bucket-candidate-param="<%= candidate.id %>"
+            data-action="click->candidate#update_bucket"
+            data-candidate-bucket-param="<%= v %>"
+            data-candidate-candidate-param="<%= candidate.id %>"
           >
             <div class="flex p-1 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600">
-              <div class="ms-2 text-xs"><label class="cursor-pointer font-medium text-gray-900 dark:text-gray-300"><div><%= k.humanize %></div>              </label></div>
+              <div class="ms-2 text-xs">
+                <label class="cursor-pointer font-medium text-gray-900 dark:text-gray-300">
+                  <div><%= k.humanize %></div>
+                </label>
+              </div>
             </div>
           </li>
         <% end %>
