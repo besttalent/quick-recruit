@@ -7,17 +7,17 @@
   ```
 -->
 
-<div class="flex min-h-full flex-col">
+<div class="stack-fill">
   <!-- 3 column wrapper -->
-  <div class="mx-auto w-full grow lg:flex xl:px-2 -ml-4">
+  <div class="content-shell">
     <!-- Left sidebar & main wrapper -->
-    <div class="w-80 xl:flex min-h-screen"><%= render partial: "opening/profile", locals: { opening: @opening } %></div>
+    <div class="sidebar-shell"><%= render partial: "opening/profile", locals: { opening: @opening } %></div>
 
     <div class="flex-1">
       <!-- Main area -->
       <%= render partial: "opening/nav", locals: { opening: @opening } %>
       <div class="text-sm">
-        <div class="overflow-x-auto">
+        <div class="scroll-x">
           <table class="text-sm text-left text-gray-500 dark:text-gray-400 w-full">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>

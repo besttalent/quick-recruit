@@ -1,16 +1,16 @@
-<section class="bg-white dark:bg-gray-900">
-  <div class="py-8 px-4 mx-auto max-w-2xl lg:py-8">
+<section class="page-surface">
+  <div class="form-page-container">
     <%= render "shared/form_messages", resource: @form, message: local_assigns[:message] %>
     <%= render "shared/form_header", title: "Add New Job Opening", subtitle: "Please fill in details of new Job Opening." %>
 
     <%= tailwind_form_with(model: @opening, id: dom_id(@opening), url: openings_path, method: "POST") do |form| %>
-      <div class="mt-4 mb-2 grid gap-4 sm:gap-6">
+      <div class="grid-block-spaced">
         <div><%= form.text_field :title, "Opening Name", required: true, placeholder: "eg. Android Developer" %></div>
       </div>
 
       <div class="grid gap-4 sm:grid-cols-2 sm:gap-6 pt-4">
         <div>
-          <label for="opening_role_id" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">
+          <label for="opening_role_id" class="field-label-inline">
             Primary skill
             <button
               type="button"
@@ -28,11 +28,11 @@
           <%= form.collection_select(:role_id, @roles, :id, :title, { :prompt => "Select Primary Skill" }, :class => "form-text-field", :required => true) %>
         </div>
 
-        <div><label for="opening_active" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">Select if Active</label><%= form.select(:active, [["Active", true], ["Inactive", false]], {}, :class => "form-text-field") %></div>
+        <div><label for="opening_active" class="field-label-inline">Select if Active</label><%= form.select(:active, [["Active", true], ["Inactive", false]], {}, :class => "form-text-field") %></div>
 
-        <div><label for="opening_priority" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">Priority</label><%= select_tag :priority, options_for_select(Opening.priorities.map { |k, v| [k.humanize.capitalize, k] }), class: "form-text-field", :name => "opening[priority]", id: "opening_priority" %></div>
+        <div><label for="opening_priority" class="field-label-inline">Priority</label><%= select_tag :priority, options_for_select(Opening.priorities.map { |k, v| [k.humanize.capitalize, k] }), class: "form-text-field", :name => "opening[priority]", id: "opening_priority" %></div>
 
-        <div><label for="opening_owner_id" class="inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white">Owner</label><%= form.collection_select(:owner_id, User.recruiters, :id, :name, { :prompt => "Select Owner" }, :class => "form-text-field", :required => true) %></div>
+        <div><label for="opening_owner_id" class="field-label-inline">Owner</label><%= form.collection_select(:owner_id, User.recruiters, :id, :name, { :prompt => "Select Owner" }, :class => "form-text-field", :required => true) %></div>
       </div>
 
       <button type="submit" class="btn-primary mt-4">

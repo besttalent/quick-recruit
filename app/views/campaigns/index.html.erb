@@ -2,11 +2,11 @@
   <div class="mx-auto max-w-screen-2xl lg:px-8">
     <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-xs overflow-hidden">
       <div class="border-b border-gray-200 dark:border-gray-700">
-        <div class="divide-y dark:divide-gray-700">
-          <div class="flex-row items-center justify-between p-4 space-y-3 sm:flex sm:space-y-0 sm:space-x-4">
+        <div class="list-divider">
+          <div class="panel-header-row">
             <div>
-              <h1 class="mr-3 text-lg font-semibold dark:text-white">Sprints</h1>
-              <p class="text-gray-500 dark:text-gray-400 text-sm">Manage all your sprints or create new one.</p>
+              <h1 class="heading-lg-soft">Sprints</h1>
+              <p class="text-muted-sm">Manage all your sprints or create new one.</p>
             </div>
 
             <a type="button" href="/campaigns/new" class="btn-primary">Add new Sprint</a>
@@ -72,8 +72,8 @@
         <% end %>
       </div>
 
-      <div class="overflow-x-auto">
-        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <div class="scroll-x">
+        <table class="input-muted">
           <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
               <th scope="col" class="px-4 py-3">Sprint Name</th>

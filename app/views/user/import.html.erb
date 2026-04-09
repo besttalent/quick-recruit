@@ -1,7 +1,7 @@
-<section class="bg-white dark:bg-gray-900">
-  <div class="py-8 px-4 mx-auto max-w-2xl lg:py-8">
+<section class="page-surface">
+  <div class="form-page-container">
     <%= form_tag import_csv_path, method: :post, multipart: true do %>
-      <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+      <div class="form-grid-simple">
         <div class="sm:col-span-2">
           <div class="py-4">
             <h2 class="text-lg mb-1 font-semibold leading-none text-gray-900 dark:text-white">
@@ -16,7 +16,7 @@
           </div>
 
           <div>
-            <label for="import_bucket" class="inline-flex items-center mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            <label for="import_bucket" class="field-label-inline-spaced">
               Select which bucket to assign candidates to
               <button
                 type="button"
@@ -34,7 +34,7 @@
           </div>
 
           <div class="sm:col-span-2 mt-4 mb-4">
-            <label for="import_opening_id" class="inline-flex items-center mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            <label for="import_opening_id" class="field-label-inline-spaced">
               Associate candidates with Job Opening
               <button
                 type="button"
@@ -52,7 +52,7 @@
           </div>
 
           <div class="sm:col-span-2 mt-4 mb-4">
-            <label for="import_style" class="inline-flex items-center mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            <label for="import_style" class="field-label-inline-spaced">
               Select type of import
               <button
                 type="button"

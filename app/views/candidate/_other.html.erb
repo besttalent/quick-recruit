@@ -1,27 +1,27 @@
 <div class="mb-24">
   <dt class="mb-2 font-semibold leading-none text-gray-900 text-sm dark:text-white">Other Details</dt>
 
-  <dd class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+  <dd class="meta-row">
     <%= svg_icon("source-arrow", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
-    <p class="text-gray-900 text-sm dark:text-gray-400">Source: <%= candidate.source.title %></p>
+    <p class="meta-text">Source: <%= candidate.source.title %></p>
   </dd>
 
-  <dd class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+  <dd class="meta-row">
     <%= render partial: "candidate/owner", locals: { candidate: candidate } %>
   </dd>
 
-  <dd class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+  <dd class="meta-row">
     <%= svg_icon("user-round", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
-    <p class="text-gray-900 text-sm dark:text-gray-400">Added By: <%= candidate.user.name %></p>
+    <p class="meta-text">Added By: <%= candidate.user.name %></p>
   </dd>
 
-  <dd class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+  <dd class="meta-row">
     <%= svg_icon("clock", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
-    <p class="text-gray-900 text-sm dark:text-gray-400">Added on: <%= display_date(candidate.created_at) %></p>
+    <p class="meta-text">Added on: <%= display_date(candidate.created_at) %></p>
   </dd>
 
-  <dd class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+  <dd class="meta-row">
     <%= svg_icon("clock", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
-    <p class="text-gray-900 text-sm dark:text-gray-400">Updated on: <%= display_date(candidate.updated_at) %></p>
+    <p class="meta-text">Updated on: <%= display_date(candidate.updated_at) %></p>
   </dd>
 </div>

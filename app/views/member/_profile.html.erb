@@ -6,27 +6,27 @@
       <div>
         <h4 id="drawer-label" class="flex items-center mb-1 text-lg font-semibold leading-none text-gray-900 dark:text-white">
           <%= member.name %>
-          <a href="<%= edit_member_path(member) %>" data-tooltip-target="tooltip-edit" class="p-1 ml-1 text-gray-500 rounded-xs hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700"><%= svg_icon("profile-edit", class_name: "w-5 h-5") %><span class="sr-only">Edit Profile</span></a>
+          <a href="<%= edit_member_path(member) %>" data-tooltip-target="tooltip-edit" class="icon-button-muted"><%= svg_icon("profile-edit", class_name: "w-5 h-5") %><span class="sr-only">Edit Profile</span></a>
         </h4>
 
         <%= tooltip_component(id: "tooltip-edit", text: "Edit profile") %>
 
-        <div class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+        <div class="meta-row">
           <%= svg_icon("email", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
 
-          <p class="text-gray-900 text-sm dark:text-gray-400"><%= member.email %></p>
+          <p class="meta-text"><%= member.email %></p>
         </div>
 
-        <div class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+        <div class="meta-row">
           <%= svg_icon("phone", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
 
-          <p class="text-gray-900 text-sm dark:text-gray-400"><%= member.phone %></p>
+          <p class="meta-text"><%= member.phone %></p>
         </div>
 
-        <div class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+        <div class="meta-row">
           <%= svg_icon("location-pin", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
 
-          <p class="text-gray-900 text-sm dark:text-gray-400"><%= member.location %></p>
+          <p class="meta-text"><%= member.location %></p>
         </div>
       </div>
     </div>
@@ -46,14 +46,14 @@
 
       <dt class="mb-2 font-semibold leading-none text-gray-900 text-sm dark:text-white">Professional Details</dt>
 
-      <dd class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+      <dd class="meta-row">
         <%= svg_icon("company-building", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
-        <p class="text-gray-900 text-sm dark:text-gray-400"><%= member.current_company %></p>
+        <p class="meta-text"><%= member.current_company %></p>
       </dd>
 
-      <dd class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+      <dd class="meta-row">
         <%= svg_icon("briefcase", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
-        <p class="text-gray-900 text-sm dark:text-gray-400"><%= member.current_title %></p>
+        <p class="meta-text"><%= member.current_title %></p>
       </dd>
     </dl>
   </div>

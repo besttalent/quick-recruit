@@ -1,6 +1,6 @@
 <div class="py-8 px-4 mx-auto max-w-4xl lg:py-8">
-  <h1 class="mr-3 text-lg font-semibold dark:text-white">Edit <%= @opening.title %> Intenal Note</h1>
-  <p class="text-gray-500 dark:text-gray-400 text-sm">Edit intenal note about this job description.</p>
+  <h1 class="heading-lg-soft">Edit <%= @opening.title %> Intenal Note</h1>
+  <p class="text-muted-sm">Edit intenal note about this job description.</p>
   <%= form_with model: @opening, url: opening_note_path(@opening), method: :patch do |form| %>
     <div class="field mt-8">
       <%= form.rich_text_area :note %>

@@ -17,8 +17,8 @@
         <div class="flex-shrink-0"><%= display_medium_avatar(@feedback.user) %></div>
 
         <div>
-          <div class="text-sm"><a href="<%= member_feedbacks_path(@feedback.user) %>" class="font-medium text-gray-900 hover:underline"><%= @feedback.user.name %></a></div>
-          <div class="mt-1 space-x-2 text-sm"><span class="font-medium text-gray-500"><%= @feedback.submitter.name %> created on <%= display_created_at(@feedback) %>.</span></div>
+          <div class="text-sm"><a href="<%= member_feedbacks_path(@feedback.user) %>" class="link-strong-underline"><%= @feedback.user.name %></a></div>
+          <div class="mt-1 space-x-2 text-sm"><span class="caption-muted"><%= @feedback.submitter.name %> created on <%= display_created_at(@feedback) %>.</span></div>
         </div>
       </div>
     </div>

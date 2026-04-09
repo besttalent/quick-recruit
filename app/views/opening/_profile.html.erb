@@ -8,7 +8,7 @@
           <%= opening.title %>
 
           <% if policy(:opening).edit? %>
-            <a href="<%= edit_opening_path(opening) %>" data-tooltip-target="tooltip-edit" class="p-1 ml-1 text-gray-500 rounded-xs hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700"><%= svg_icon("profile-edit", class_name: "w-5 h-5") %><span class="sr-only">Edit Opening</span></a>
+            <a href="<%= edit_opening_path(opening) %>" data-tooltip-target="tooltip-edit" class="icon-button-muted"><%= svg_icon("profile-edit", class_name: "w-5 h-5") %><span class="sr-only">Edit Opening</span></a>
             <%= tooltip_component(id: "tooltip-edit", text: "Edit Opening") %>
           <% end %>
 
@@ -16,7 +16,7 @@
             href="<%= show_public_openings_path(opening) %>"
             target="_blank"
             data-tooltip-target="tooltip-view"
-            class="p-1 text-gray-500 rounded-xs hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+            class="icon-button"
           >
             <%= svg_icon("opening-external", class_name: "w-5 h-5 text-gray-800 dark:text-white") %>
           </a>
@@ -25,10 +25,10 @@
         </h4>
 
         <% unless opening.location.nil? %>
-          <div class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+          <div class="meta-row">
             <%= svg_icon("location-pin", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
 
-            <p class="text-gray-900 text-sm dark:text-gray-400"><%= opening.location %></p>
+            <p class="meta-text"><%= opening.location %></p>
           </div>
         <% end %>
       </div>
@@ -44,19 +44,19 @@
     <div class="mb-24">
       <dt class="mb-2 font-semibold leading-none text-gray-900 text-sm dark:text-white">Other Details</dt>
 
-      <dd class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+      <dd class="meta-row">
         <%= svg_icon("user-round", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
-        <p class="text-gray-900 text-sm dark:text-gray-400">Owner: <%= opening.owner.name %></p>
+        <p class="meta-text">Owner: <%= opening.owner.name %></p>
       </dd>
 
-      <dd class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+      <dd class="meta-row">
         <%= svg_icon("clock", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
-        <p class="text-gray-900 text-sm dark:text-gray-400">Created On: <%= display_date(opening.created_at) %></p>
+        <p class="meta-text">Created On: <%= display_date(opening.created_at) %></p>
       </dd>
 
-      <dd class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+      <dd class="meta-row">
         <%= svg_icon("clock", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
-        <p class="text-gray-900 text-sm dark:text-gray-400">Updated On: <%= display_date(opening.updated_at) %></p>
+        <p class="meta-text">Updated On: <%= display_date(opening.updated_at) %></p>
       </dd>
     </div>
   </div>

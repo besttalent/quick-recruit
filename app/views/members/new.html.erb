@@ -1,5 +1,5 @@
-<section class="bg-white dark:bg-gray-900">
-  <div class="py-8 px-4 mx-auto max-w-2xl lg:py-8">
+<section class="page-surface">
+  <div class="form-page-container">
     <%= render "shared/form_messages", resource: @form, message: local_assigns[:message] %>
     <%= render "shared/form_header", title: "Add new team member", subtitle: "Please fill in details of new team member." %>
 
@@ -12,7 +12,7 @@
         <div><%= form.text_field :email, "Email", required: true %></div>
 
         <div>
-          <label for="user_role" class="inline-flex items-center mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          <label for="user_role" class="field-label-inline-spaced">
             User Role
             <button
               type="button"

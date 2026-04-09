@@ -1,11 +1,11 @@
 <section class="bg-gray-50 dark:bg-gray-900 py-3 sm:py-5 min-h-screen">
-  <div class="px-4 mx-auto max-w-screen-2xl lg:px-8">
-    <div class="relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-xs">
-      <div class="divide-y dark:divide-gray-700">
-        <div class="flex-row items-center justify-between p-4 space-y-3 sm:flex sm:space-y-0 sm:space-x-4">
+  <div class="page-container-wide">
+    <div class="page-card">
+      <div class="list-divider">
+        <div class="panel-header-row">
           <div>
-            <h1 class="mr-3 text-lg font-semibold dark:text-white"><%= @campaign.name %></h1>
-            <p class="text-gray-500 dark:text-gray-400 text-sm">Following <span class="font-bold"><%= @candidates.count %></span> candidates are currently in this sprint under various stages.</p>
+            <h1 class="heading-lg-soft"><%= @campaign.name %></h1>
+            <p class="text-muted-sm">Following <span class="font-bold"><%= @candidates.count %></span> candidates are currently in this sprint under various stages.</p>
           </div>
           <% if @campaign.active? %>
           <div class="flex space-x-2">
@@ -22,9 +22,9 @@
         </div>
       </div>
 
-      <div class="overflow-x-auto">
+      <div class="scroll-x">
         <div class="font-medium whitespace-nowrap w-full"><%= render partial: "progress", locals: { campaign: @campaign } %></div>
-        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <table class="input-muted">
           <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
               <th scope="col" class="px-4 py-3">Name</th>

@@ -1,39 +1,39 @@
 <div class="mb-4">
   <dt class="mb-2 font-semibold leading-none text-gray-900 text-sm dark:text-white">Professional Details</dt>
 
-  <dd class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+  <dd class="meta-row">
     <%= svg_icon("company-building", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
-    <p class="text-gray-900 text-sm dark:text-gray-400"><%= candidate.current_company.blank? ? "-" : candidate.current_company %></p>
+    <p class="meta-text"><%= candidate.current_company.blank? ? "-" : candidate.current_company %></p>
   </dd>
 
-  <dd class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+  <dd class="meta-row">
     <%= svg_icon("briefcase", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
-    <p class="text-gray-900 text-sm dark:text-gray-400"><%= candidate.current_title %></p>
+    <p class="meta-text"><%= candidate.current_title %></p>
   </dd>
 
   <% unless current_user.interviewer? %>
-    <dd class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+    <dd class="meta-row">
       <%= svg_icon("ctc-currency", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
-      <p class="text-gray-900 text-sm dark:text-gray-400">Current CTC: <%= candidate.current_ctc %> LPA</p>
+      <p class="meta-text">Current CTC: <%= candidate.current_ctc %> LPA</p>
     </dd>
-    <dd class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+    <dd class="meta-row">
       <%= svg_icon("expected-ctc", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
-      <p class="text-gray-900 text-sm dark:text-gray-400">Expected CTC: <%= candidate.expected_ctc %> LPA</p>
+      <p class="meta-text">Expected CTC: <%= candidate.expected_ctc %> LPA</p>
     </dd>
-    <dd class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+    <dd class="meta-row">
       <%= svg_icon("notice-period", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
-      <p class="text-gray-900 text-sm dark:text-gray-400">Notice Period: <%= candidate.notice_period %> days</p>
+      <p class="meta-text">Notice Period: <%= candidate.notice_period %> days</p>
     </dd>
   <% end %>
 
-  <dd class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+  <dd class="meta-row">
     <%= svg_icon("hourglass", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
-    <p class="text-gray-900 text-sm dark:text-gray-400">Experience: <%= candidate.experience.to_s %> years</p>
+    <p class="meta-text">Experience: <%= candidate.experience.to_s %> years</p>
   </dd>
 
-  <dd class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+  <dd class="meta-row">
     <%= svg_icon("book", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
-    <p class="text-gray-900 text-sm dark:text-gray-400">Education: <%= candidate.highest_qualification %></p>
+    <p class="meta-text">Education: <%= candidate.highest_qualification %></p>
   </dd>
 
   <%= render partial: "candidate/resume", locals: { candidate: candidate } %>

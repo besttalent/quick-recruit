@@ -9,7 +9,7 @@
           <p class="whitespace-pre-wrap"><%= auto_link_urls_in_text(note.body) %></p>
         </div>
 
-        <div class="mt-2 space-x-2 text-sm"><span class="font-medium text-gray-500"><%= display_created_at(note) %></span><%= edit_button(edit_candidate_note_path(@candidate, note)) %><%= delete_button(candidate_note_path(@candidate, note)) %></div>
+        <div class="mt-2 space-x-2 text-sm"><span class="caption-muted"><%= display_created_at(note) %></span><%= edit_button(edit_candidate_note_path(@candidate, note)) %><%= delete_button(candidate_note_path(@candidate, note)) %></div>
       </div>
     </div>
   </li>

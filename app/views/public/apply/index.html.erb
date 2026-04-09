@@ -1,5 +1,5 @@
-<section class="bg-white dark:bg-gray-900">
-  <div class="py-8 px-4 mx-auto max-w-2xl lg:py-8">
+<section class="page-surface">
+  <div class="form-page-container">
     <div class="w-24 mb-4">
       <a href="/public/openings">
         <%= svg_icon("crownstack-logo", class_name: "w-24") %>
@@ -20,7 +20,7 @@
       <%= render "shared/error_messages", resource: @candidate %>
       <%= render "shared/form_messages", resource: @candidate, message: local_assigns[:message] %>
 
-      <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+      <div class="form-grid-simple">
         <div class="sm:col-span-2">
           <div class="py-4">
             <h2 class="text-lg mb-1 font-semibold leading-none text-gray-900 dark:text-white">Upload Resume</h2>
@@ -51,9 +51,9 @@
         <div class="sm:col-span-2 mb-4"><%= form.text_area :biography, "Tell us about yourself", placeholder: "Some personal and professional details about yourself..", style: "height:120px" %></div>
       </div>
 
-      <h2 class="mb-4 mt-8 text-xl font-semibold leading-none text-gray-900 dark:text-white">Professional Information</h2>
+      <h2 class="section-title">Professional Information</h2>
 
-      <div class="grid gap-4 mb-4 md:gap-6 md:grid-cols-2 sm:mb-8">
+      <div class="form-grid-2">
         <div><%= form.text_field :current_title, "Current Job Title", required: true, placeholder: "Senior Software Engineer" %></div>
 
         <div><%= form.text_field :current_company, "Current Employer", required: true, placeholder: "Current Company Name" %></div>

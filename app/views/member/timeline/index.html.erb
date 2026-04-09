@@ -6,11 +6,11 @@
   <body class="h-full">
   ```
 -->
-<div class="flex min-h-full flex-col">
+<div class="stack-fill">
   <!-- 3 column wrapper -->
-  <div class="mx-auto w-full grow lg:flex xl:px-2 -ml-4">
+  <div class="content-shell">
     <!-- Left sidebar & main wrapper -->
-    <div class="w-80 xl:flex min-h-screen">
+    <div class="sidebar-shell">
       <%= render partial: "member/profile", locals: { member: @member } %>
     </div>
     <div class="flex-1">

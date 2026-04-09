@@ -1,5 +1,5 @@
 <% if candidate.resume.attached? %>
-  <dd id="<%= dom_id(candidate.resume) %>" class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+  <dd id="<%= dom_id(candidate.resume) %>" class="meta-row">
     <%= svg_icon("resume-card", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
     <p class="text-blue-600 text-sm dark:text-blue-500 underline mr-2"><%= link_to "Resume", url_for(candidate.resume), target: :_blank %></p>
 
@@ -14,7 +14,7 @@
   </dd>
 <% else %>
   <dd class="border border-gray-200 p-4 mt-2">
-    <div class="flex items-center text-sm font-light text-gray-900 dark:text-gray-400">
+    <div class="meta-row">
       <p class="text-xs text-italic mb-2">No resume attached. Please upload a PDF file to upload new resume.</p>
     </div>
 

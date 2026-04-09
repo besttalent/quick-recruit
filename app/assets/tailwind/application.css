@@ -129,3 +129,187 @@
 .tooltip {
   @apply inline-block absolute z-10 py-1 px-2 text-xs font-medium text-white bg-gray-900 rounded-xs shadow-xs transition-opacity duration-300 dark:bg-gray-700;
 }
+
+.page-surface {
+  @apply bg-white dark:bg-gray-900;
+}
+
+.form-page-container {
+  @apply py-8 px-4 mx-auto max-w-2xl lg:py-8;
+}
+
+.section-title {
+  @apply mb-4 mt-8 text-xl font-semibold leading-none text-gray-900 dark:text-white;
+}
+
+.form-grid-2 {
+  @apply grid gap-4 mb-4 md:gap-6 md:grid-cols-2 sm:mb-8;
+}
+
+.field-label-inline {
+  @apply inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white;
+}
+
+.field-label-inline-spaced {
+  @apply inline-flex items-center mb-2 text-sm font-medium text-gray-900 dark:text-white;
+}
+
+.icon-button {
+  @apply p-1 text-gray-500 rounded-xs hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700;
+}
+
+.icon-button-muted {
+  @apply p-1 ml-1 text-gray-500 rounded-xs hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700;
+}
+
+.link-strong-underline {
+  @apply font-medium text-gray-900 hover:underline;
+}
+
+.text-muted-sm {
+  @apply text-gray-500 dark:text-gray-400 text-sm;
+}
+
+.meta-row {
+  @apply flex items-center text-sm font-light text-gray-900 dark:text-gray-400;
+}
+
+.meta-text {
+  @apply text-gray-900 text-sm dark:text-gray-400;
+}
+
+.dropdown-item {
+  @apply block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white;
+}
+
+.input-muted {
+  @apply w-full text-sm text-left text-gray-500 dark:text-gray-400;
+}
+
+.inline-link-row {
+  @apply flex items-center hover:underline;
+}
+
+.hover-list-row {
+  @apply border-b border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700;
+}
+
+.hover-reveal-link {
+  @apply font-medium ml-2 invisible group-hover:visible text-primary-600 dark:text-primary-500 inline-flex items-center;
+}
+
+.field-label-block {
+  @apply block mb-2 text-sm font-medium text-gray-900 dark:text-white;
+}
+
+.page-card {
+  @apply relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-xs;
+}
+
+.page-container-wide {
+  @apply px-4 mx-auto max-w-screen-2xl lg:px-8;
+}
+
+.panel-header-row {
+  @apply flex-row items-center justify-between p-4 space-y-3 sm:flex sm:space-y-0 sm:space-x-4;
+}
+
+.heading-lg-soft {
+  @apply mr-3 text-lg font-semibold dark:text-white;
+}
+
+.body-muted {
+  @apply text-sm font-normal text-gray-500 dark:text-gray-300;
+}
+
+.timeline-item {
+  @apply mb-4 ms-6;
+}
+
+.timeline-node {
+  @apply absolute flex items-center justify-center w-7 h-7 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900;
+}
+
+.content-shell {
+  @apply mx-auto w-full grow lg:flex xl:px-2 -ml-4;
+}
+
+.sidebar-shell {
+  @apply w-80 xl:flex min-h-screen;
+}
+
+.stack-fill {
+  @apply flex min-h-full flex-col;
+}
+
+.scroll-x {
+  @apply overflow-x-auto;
+}
+
+.list-divider {
+  @apply divide-y dark:divide-gray-700;
+}
+
+.status-dot-success {
+  @apply w-3 h-3 mr-2 bg-green-500 border-green-500 rounded-full;
+}
+
+.status-dot-danger {
+  @apply w-3 h-3 mr-2 bg-red-500 border-red-500 rounded-full;
+}
+
+.bucket-card {
+  @apply col-span-1 flex rounded-xs shadow-xs;
+}
+
+.bucket-card-body {
+  @apply flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white;
+}
+
+.bucket-card-content {
+  @apply flex-1 truncate px-4 py-2 text-sm;
+}
+
+.actions-row {
+  @apply flex justify-end mt-2 mb-6 mr-2;
+}
+
+.caption-muted {
+  @apply font-medium text-gray-500;
+}
+
+.overlay-hitbox {
+  @apply absolute -inset-1.5;
+}
+
+.tabs-item {
+  @apply block border-b border-gray-200 dark:border-gray-700 lg:inline lg:border-b-0;
+}
+
+.tabs-item-inline {
+  @apply block lg:inline;
+}
+
+.form-grid-simple {
+  @apply grid gap-4 sm:grid-cols-2 sm:gap-6;
+}
+
+.metrics-row {
+  @apply flex items-baseline justify-center text-xl font-semibold text-gray-600;
+}
+
+.grid-block-spaced {
+  @apply mt-4 mb-2 grid gap-4 sm:gap-6;
+}
+
+.table-wrap {
+  @apply relative overflow-x-auto;
+}
+
+.section-pad {
+  @apply px-4 py-2 sm:p-2;
+}
+
+.toolbar-compact {
+  @apply items-center justify-between p-1 sm:flex dark:bg-gray-700 dark:border-gray-600;
+}

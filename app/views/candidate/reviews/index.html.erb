@@ -6,11 +6,11 @@
   <body class="h-full">
   ```
 -->
-<div class="flex min-h-full flex-col">
+<div class="stack-fill">
   <!-- 3 column wrapper -->
-  <div class="mx-auto w-full grow lg:flex xl:px-2 -ml-4">
+  <div class="content-shell">
     <!-- Left sidebar & main wrapper -->
-    <div class="w-80 xl:flex min-h-screen">
+    <div class="sidebar-shell">
       <%= render partial: "candidate/profile", locals: { candidate: @candidate } %>
     </div>
 
@@ -66,8 +66,8 @@
                 </div>
 
                 <div class="mt-2 space-x-2 text-sm">
-                  <span class="font-medium text-gray-500">4d ago</span>
-                  <span class="font-medium text-gray-500">&middot;</span>
+                  <span class="caption-muted">4d ago</span>
+                  <span class="caption-muted">&middot;</span>
 
                   <button type="button" class="font-medium text-gray-900">Reply</button>
                 </div>
@@ -91,8 +91,8 @@
                 </div>
 
                 <div class="mt-2 space-x-2 text-sm">
-                  <span class="font-medium text-gray-500">4d ago</span>
-                  <span class="font-medium text-gray-500">&middot;</span>
+                  <span class="caption-muted">4d ago</span>
+                  <span class="caption-muted">&middot;</span>
 
                   <button type="button" class="font-medium text-gray-900">Reply</button>
                 </div>

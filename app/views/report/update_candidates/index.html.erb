@@ -2,7 +2,7 @@
   <!-- Page title & actions -->
   <div class="px-4 py-2 border-b border-gray-200 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-6">
     <div class="flex flex-wrap items-baseline">
-      <h1 class="mr-3 text-lg font-semibold dark:text-white">
+      <h1 class="heading-lg-soft">
         Updated Candidates Report
       </h1>
     </div>
@@ -15,7 +15,7 @@
       <div class="w-full overflow-hidden" data-controller="infinite-scroll">
         <!-- This example requires Tailwind CSS v2.0+ -->
         <%= render partial: "stats", locals: { stats: @stats } %>
-        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <table class="input-muted">
           <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
               <th scope="col" class="px-4 py-3">Name</th>

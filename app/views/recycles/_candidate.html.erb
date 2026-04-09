@@ -1,23 +1,23 @@
 <% candidate = recycle.candidate %>
 
-<tr class="group border-b border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+<tr class="group hover-list-row">
   <th scope="row" class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-    <div class="flex items-center hover:underline">
+    <div class="inline-link-row">
       <a href="<%= candidate_timeline_path(candidate) %>" class="flex items-center"><% if recycle.recycled? %><%= svg_icon("check-circle", class_name: "w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0") %><% else %><%= svg_icon("check-circle", class_name: "w-3.5 h-3.5 me-2 text-gray-500 dark:text-gray-400 flex-shrink-0") %><% end %><%= candidate.name %></a>
-      <a href="<%= candidate_timeline_path(candidate) %>" class="font-medium ml-2 invisible group-hover:visible text-primary-600 dark:text-primary-500 inline-flex items-center"><%= svg_icon("candidate-eye", class_name: "w-4 h-4 text-gray-800 dark:text-white") %></a>
+      <a href="<%= candidate_timeline_path(candidate) %>" class="hover-reveal-link"><%= svg_icon("candidate-eye", class_name: "w-4 h-4 text-gray-800 dark:text-white") %></a>
     </div>
   </th>
 
   <td class="px-4 py-2">
     <% if candidate.opening.active? %>
       <div class="flex items-center">
-        <div class="w-3 h-3 mr-2 bg-green-500 border-green-500 rounded-full"></div>
+        <div class="status-dot-success"></div>
         <span class="text-xs font-medium me-2 px-1.5 py-0.5 rounded-sm border bg-<%= priority_color(candidate.opening.priority) %>-100 text-<%= priority_color(candidate.opening.priority) %>-800 border-<%= priority_color(candidate.opening.priority) %>-400"><%= candidate.opening.priority.titleize %></span>
         <%= candidate.opening.nil? ? "-" : candidate.opening.title %>
       </div>
     <% else %>
       <div class="flex items-center">
-        <div class="w-3 h-3 mr-2 bg-red-500 border-red-500 rounded-full"></div>
+        <div class="status-dot-danger"></div>
         <span class="text-xs font-medium me-2 px-1.5 py-0.5 rounded-sm border bg-<%= priority_color(candidate.opening.priority) %>-100 text-<%= priority_color(candidate.opening.priority) %>-800 border-<%= priority_color(candidate.opening.priority) %>-400"><%= candidate.opening.priority.titleize %></span>
         <%= candidate.opening.nil? ? "-" : candidate.opening.title %>
       </div>

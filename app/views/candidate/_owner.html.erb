@@ -2,7 +2,7 @@
   <div class="flex items-center">
     <%= svg_icon("user-round", class_name: "w-4 h-4 mr-2 text-gray-800 dark:text-white") %>
 
-    <p class="text-gray-900 text-sm dark:text-gray-400">Owner: <%= candidate.owner.name %></p>
+    <p class="meta-text">Owner: <%= candidate.owner.name %></p>
 
     <% if policy(candidate).update_owner? %>
       <div
