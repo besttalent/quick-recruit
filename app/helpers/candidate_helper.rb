@@ -9,7 +9,7 @@ module CandidateHelper
       "yellow"
     when "no_show", "not_contactable", "follow_up_needed", "on_hold"
       "sky"
-    when "offer_to_be_made", "offer_made", "offer_accepted", "offer_declined", "joined"
+    when "offer_to_be_made", "offer_made", "offer_accepted", "joined"
       "green"
     when "incomplete_profile", "unqualified", "other", "irrelevant", "moved_on"
       "gray"

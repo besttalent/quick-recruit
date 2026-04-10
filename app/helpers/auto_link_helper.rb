@@ -1,6 +1,10 @@
 # encoding: utf-8
 
 module AutoLinkHelper
+  def auto_link_urls_in_text(text)
+    auto_link(text, html: { class: "text-indigo-700 hover:underline", target: "_blank" })
+  end
+
   require "active_support/core_ext/object/blank"
   require "active_support/core_ext/array/extract_options"
   require "active_support/core_ext/hash/reverse_merge"
