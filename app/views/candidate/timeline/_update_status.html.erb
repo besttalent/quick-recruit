@@ -4,6 +4,6 @@
   </span>
   <div class="toolbar-compact">
     <time class="timeline-meta-muted"><%= display_created_at_with_time(event) %></time>
-    <div class="body-muted"><a href="<%= member_timeline_path(event.user) %>" class="link-strong-underline"><%= event.user.name %></a> updated candidate status to <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2 py-0.5 rounded-sm"><%= event.action_for_context %></span></div>
+    <div class="body-muted"><a href="<%= member_timeline_path(event.user) %>" class="link-strong-underline"><%= event.user.name %></a> updated candidate status to <span class="badge-primary-soft"><%= event.action_for_context %></span></div>
   </div>
 </li>

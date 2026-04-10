@@ -1,6 +1,6 @@
 <turbo-frame id="events">
   <div class="px-0 lg:px-6">
-    <ol class="relative border-s border-gray-200 dark:border-gray-700">
+    <ol class="timeline-list-track">
       <% @events.each do |event| %>
         <% if lookup_context.template_exists?(event.action, "dashboard", true) %>
           <%= render partial: event.action, locals: { event: event } %>

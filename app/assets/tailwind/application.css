@@ -202,6 +202,10 @@
   @apply w-full text-sm text-left text-gray-500 dark:text-gray-400;
 }
 
+.textarea-plain {
+  @apply w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400;
+}
+
 .inline-link-row {
   @apply flex items-center hover:underline;
 }
@@ -263,6 +267,22 @@
 
 .timeline-node {
   @apply absolute flex items-center justify-center w-7 h-7 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900;
+}
+
+.timeline-list-wrap {
+  @apply px-0 lg:px-6 py-6;
+}
+
+.timeline-list-track {
+  @apply relative border-s border-gray-200 dark:border-gray-700;
+}
+
+.badge-warning-soft {
+  @apply bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2 py-0.5 rounded-sm dark:bg-gray-700 dark:text-yellow-300 border border-yellow-300;
+}
+
+.badge-success-soft {
+  @apply bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2 py-0.5 rounded-sm dark:bg-primary-200 dark:text-primary-800;
 }
 
 .content-shell {
