@@ -16,13 +16,13 @@
   <td class="px-4 py-2">
     <% if candidate.opening.active? %>
       <div class="flex items-center">
-        <div class="status-dot-success"></div>
+        <div class="badge-dot-success"></div>
         <span class="text-xs font-medium me-2 px-1.5 py-0.5 rounded-sm border bg-<%= priority_color(candidate.opening.priority) %>-100 text-<%= priority_color(candidate.opening.priority) %>-800 border-<%= priority_color(candidate.opening.priority) %>-400"><%= candidate.opening.priority.titleize %></span>
         <%= candidate.opening.nil? ? "-" : candidate.opening.title %>
       </div>
     <% else %>
       <div class="flex items-center">
-        <div class="status-dot-danger"></div>
+        <div class="badge-dot-danger"></div>
         <span class="text-xs font-medium me-2 px-1.5 py-0.5 rounded-sm border bg-<%= priority_color(candidate.opening.priority) %>-100 text-<%= priority_color(candidate.opening.priority) %>-800 border-<%= priority_color(candidate.opening.priority) %>-400"><%= candidate.opening.priority.titleize %></span>
         <%= candidate.opening.nil? ? "-" : candidate.opening.title %>
       </div>

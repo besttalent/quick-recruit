@@ -9,7 +9,7 @@
               <p class="mt-1 truncate text-xs text-gray-500"><%= candidate.opening.title %></p>
             </div>
           </div>
-          <div class="hidden shrink-0 sm:flex flex-col sm:items-end ">
+          <div class="hidden shrink-0 sm:flex flex-col sm:items-end">
             <p class="mt-1 text-xs text-gray-500 text-right">Owner: <%= candidate.owner.name %></p>
             <p class="mt-1 text-xs text-gray-500 text-right">Bucket: <%= candidate.bucket.humanize %></p>
           </div>
@@ -17,4 +17,5 @@
 
       <% end %>
     </ul>
+  </div>
   </turbo-frame>

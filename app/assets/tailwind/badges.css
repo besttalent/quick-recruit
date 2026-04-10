@@ -11,10 +11,10 @@
   @apply bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2 py-0.5 rounded-sm dark:bg-primary-200 dark:text-primary-800;
 }
 
-.status-dot-success {
+.badge-dot-success {
   @apply w-3 h-3 mr-2 bg-green-500 border-green-500 rounded-full;
 }
 
-.status-dot-danger {
+.badge-dot-danger {
   @apply w-3 h-3 mr-2 bg-red-500 border-red-500 rounded-full;
 }

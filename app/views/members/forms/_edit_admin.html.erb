@@ -45,7 +45,7 @@
 
   <div class="form-grid-2">
     <div>
-      <label for="user_role" class="field-label-inline-spaced">
+      <label for="user_role" class="form-field-label-inline-spaced">
         User Role
         <button
           type="button"
@@ -63,7 +63,7 @@
       <%= select_tag :role, options_for_select(User.roles.map { |k, v| [k.humanize.titleize, k] }, member.role), class: "form-text-field", :name => "user[role]", id: "user_role" %>
     </div>
 
-    <div><label for="user_active" class="field-label-inline">Select if Active</label><%= form.select(:active, [["Active", true], ["Inactive", false]], {}, :class => "form-text-field") %></div>
+    <div><label for="user_active" class="form-field-label-inline">Select if Active</label><%= form.select(:active, [["Active", true], ["Inactive", false]], {}, :class => "form-text-field") %></div>
   </div>
 
   <button type="submit" class="btn-primary">

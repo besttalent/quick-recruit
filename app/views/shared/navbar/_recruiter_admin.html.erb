@@ -1,31 +1,31 @@
 <nav class="bg-gray-800">
-  <div class="navbar-max">
-    <div class="navbar-row">
-      <div class="navbar-mobile-toggle"></div>
+  <div class="nav-shell-max">
+    <div class="nav-shell-row">
+      <div class="nav-mobile-toggle"></div>
 
-      <div class="navbar-main">
-        <div class="navbar-brand-wrap"><a href="/"><h1 class="navbar-brand-text">Quick Recruit</h1>        </a></div>
-        <div class="navbar-user-block">
+      <div class="nav-shell-main">
+        <div class="nav-brand-wrap"><a href="/"><h1 class="nav-brand-text">Quick Recruit</h1>        </a></div>
+        <div class="nav-user-block">
           <div class="flex space-x-1">
             
-            <a href="<%= members_path %>" class="<%= current_page?(members_path) ? "nav-selected" : "nav-unselected" %>">Team</a>
-            <a href="<%= candidates_path %>" class="<%= current_page?(candidates_path) ? "nav-selected" : "nav-unselected" %>">Candidates</a>
-            <a href="<%= pipeline_candidates_path %>" class="<%= current_page?(pipeline_candidates_path) ? "nav-selected" : "nav-unselected" %>">Pipeline</a>
-            <a href="<%= campaigns_path(active: true) %>" class="<%= current_page?(campaigns_path) ? "nav-selected" : "nav-unselected" %>">Sprints</a>
-            <a href="<%= recycle_path %>" class="<%= current_page?(recycle_path) ? "nav-selected" : "nav-unselected" %>">Recycle</a>
-            <a href="<%= openings_path(active: true) %>" class="<%= current_page?(openings_path) ? "nav-selected" : "nav-unselected" %>">Openings</a>
-            <a href="<%= reports_path %>" class="<%= current_page?(reports_path) ? "nav-selected" : "nav-unselected" %>">Reports</a>
+            <a href="<%= members_path %>" class="<%= current_page?(members_path) ? "nav-item-selected" : "nav-item-unselected" %>">Team</a>
+            <a href="<%= candidates_path %>" class="<%= current_page?(candidates_path) ? "nav-item-selected" : "nav-item-unselected" %>">Candidates</a>
+            <a href="<%= pipeline_candidates_path %>" class="<%= current_page?(pipeline_candidates_path) ? "nav-item-selected" : "nav-item-unselected" %>">Pipeline</a>
+            <a href="<%= campaigns_path(active: true) %>" class="<%= current_page?(campaigns_path) ? "nav-item-selected" : "nav-item-unselected" %>">Sprints</a>
+            <a href="<%= recycle_path %>" class="<%= current_page?(recycle_path) ? "nav-item-selected" : "nav-item-unselected" %>">Recycle</a>
+            <a href="<%= openings_path(active: true) %>" class="<%= current_page?(openings_path) ? "nav-item-selected" : "nav-item-unselected" %>">Openings</a>
+            <a href="<%= reports_path %>" class="<%= current_page?(reports_path) ? "nav-item-selected" : "nav-item-unselected" %>">Reports</a>
           </div>
         </div>
       </div>
 
       <div
-        class="navbar-search-wrap"
+        class="nav-search-wrap"
         data-behavior="autocomplete"
         data-controller="search"
         data-search-url-value="/search/candidates"
       >
-        <div class="navbar-dropdown-anchor">
+        <div class="nav-dropdown-anchor">
           <div class="relative">
             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               
@@ -34,7 +34,7 @@
             <input
               id="search"
               name="search"
-              class="navbar-search-input"
+              class="nav-search-input"
               placeholder="Search Candidates"
               type="search"
               data-search-target="input"
@@ -44,7 +44,7 @@
           </div>
           <div class="relative">
             <div
-              class="navbar-user-menu"
+              class="nav-user-menu"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="options-menu"
@@ -55,8 +55,8 @@
         </div>
       </div>
 
-      <div class="navbar-right">
-        <a href="/candidates/new" class="navbar-notification">
+      <div class="nav-actions">
+        <a href="/candidates/new" class="nav-notification-button">
           <span class="overlay-hitbox"></span>
           <span class="sr-only">View notifications</span>
           <%= svg_icon("plus", class_name: "h-6 w-6") %>
@@ -67,7 +67,7 @@
           <div>
             <button
               type="button"
-              class="navbar-user-button"
+              class="nav-user-button"
               id="user-menu-button"
               aria-expanded="false"
               aria-haspopup="true"
@@ -81,13 +81,13 @@
           </div>
           <div
             id="user-dropdown"
-            class="navbar-user-menu-items"
+            class="nav-user-menu-items"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="user-menu-button"
             tabindex="-1"
           >
-            <div class="px-4 py-3"><span class="navbar-user-name"><%= current_user.name %></span><span class="navbar-user-email"><%= current_user.email %></span></div>
+            <div class="px-4 py-3"><span class="nav-user-name"><%= current_user.name %></span><span class="nav-user-email"><%= current_user.email %></span></div>
 
             <ul class="py-2" aria-labelledby="user-menu-button">
               <li><a href="/account/roles" class="dropdown-item">Account Settings</a></li>

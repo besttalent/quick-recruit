@@ -2,11 +2,11 @@
   <div class="px-0 lg:px-6">
     <div class="flex items-center">
       <ul class="flex flex-col mt-0 w-full text-sm font-medium lg:flex-row">
-        <li class="tabs-item-inline"><a href="<%= opening_timeline_path(@opening) %>" class="<%= current_page?(opening_timeline_path(@opening)) ? "selected-tab" : "unselected-tab" %>">Timeline</a></li>
-        <li class="tabs-item-inline"><a href="<%= opening_interviews_path(@opening) %>" class="<%= current_page?(opening_interviews_path(@opening)) ? "selected-tab" : "unselected-tab" %>">Interviews</a></li>
-        <li class="tabs-item-inline"><a href="<%= opening_associations_path(@opening) %>" class="<%= current_page?(opening_associations_path(@opening)) ? "selected-tab" : "unselected-tab" %>">Associations</a></li>
-        <li class="tabs-item-inline"><a href="<%= opening_note_index_path(@opening) %>" class="<%= current_page?(opening_note_index_path(@opening)) ? "selected-tab" : "unselected-tab" %>">Internal Note</a></li>
-        <li class="tabs-item-inline"><a href="<%= opening_description_index_path(@opening) %>" class="<%= current_page?(opening_description_index_path(@opening)) ? "selected-tab" : "unselected-tab" %>">Job Description</a></li>
+        <li class="nav-tab-item-inline"><a href="<%= opening_timeline_path(@opening) %>" class="<%= current_page?(opening_timeline_path(@opening)) ? "nav-tab-selected" : "nav-tab-unselected" %>">Timeline</a></li>
+        <li class="nav-tab-item-inline"><a href="<%= opening_interviews_path(@opening) %>" class="<%= current_page?(opening_interviews_path(@opening)) ? "nav-tab-selected" : "nav-tab-unselected" %>">Interviews</a></li>
+        <li class="nav-tab-item-inline"><a href="<%= opening_associations_path(@opening) %>" class="<%= current_page?(opening_associations_path(@opening)) ? "nav-tab-selected" : "nav-tab-unselected" %>">Associations</a></li>
+        <li class="nav-tab-item-inline"><a href="<%= opening_note_index_path(@opening) %>" class="<%= current_page?(opening_note_index_path(@opening)) ? "nav-tab-selected" : "nav-tab-unselected" %>">Internal Note</a></li>
+        <li class="nav-tab-item-inline"><a href="<%= opening_description_index_path(@opening) %>" class="<%= current_page?(opening_description_index_path(@opening)) ? "nav-tab-selected" : "nav-tab-unselected" %>">Job Description</a></li>
       </ul>
     </div>
   </div>

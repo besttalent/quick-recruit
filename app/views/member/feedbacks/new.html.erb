@@ -11,7 +11,7 @@
     </div>
 
     <div class="mt-4">
-      <label for="feedback_nature" class="field-label-inline-spaced"> Feedback Nature </label>
+      <label for="feedback_nature" class="form-field-label-inline-spaced"> Feedback Nature </label>
       <%= select_tag :nature, options_for_select(Feedback.natures.map { |k, v| [k.humanize.capitalize, k] }), class: "form-text-field", :name => "feedback[nature]", id: "feedback_nature" %>
     </div>
 

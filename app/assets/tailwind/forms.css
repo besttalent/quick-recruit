@@ -7,11 +7,11 @@
   @apply grid gap-4 mb-4 md:gap-6 md:grid-cols-2 sm:mb-8;
 }
 
-.field-label-inline {
+.form-field-label-inline {
   @apply inline-flex items-center mb-1 text-sm font-medium text-gray-900 dark:text-white;
 }
 
-.field-label-inline-spaced {
+.form-field-label-inline-spaced {
   @apply inline-flex items-center mb-2 text-sm font-medium text-gray-900 dark:text-white;
 }
 
@@ -19,11 +19,11 @@
   @apply block mb-2 text-sm font-medium text-gray-900 dark:text-white;
 }
 
-.checkbox {
+.form-checkbox {
   @apply w-4 h-4 border border-gray-200 rounded-xs bg-gray-100 focus:ring-2 focus:ring-primary-300 checked:bg-primary-600 checked:border-primary-600 cursor-pointer;
 }
 
-.radio {
+.form-radio {
   @apply w-4 h-4 text-gray-300 border-gray-200 bg-gray-100 rounded-full checked:border-primary-500 focus:ring-2 focus:outline-none focus:ring-primary-500 border border-gray-200 appearance-none cursor-pointer checked:bg-primary-600;
 }
 
@@ -31,6 +31,6 @@
   @apply grid gap-4 sm:grid-cols-2 sm:gap-6;
 }
 
-.textarea-plain {
+.form-textarea-plain {
   @apply w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400;
 }
