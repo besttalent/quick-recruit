@@ -1,14 +1,14 @@
-<div class="relative z-0 flex-1 overflow-y-auto focus:outline-hidden">
+<div class="report-main-scroll">
   
   <div class="px-4 py-2 border-b border-gray-200 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-6">
-    <div class="flex flex-wrap items-baseline">
+    <div class="report-header-row">
       <h1 class="heading-lg-soft">
         New Candidates Report
       </h1>
     </div>
   </div>
 </div>
-<div class="flex w-full overflow-hidden bg-white">
+<div class="report-main-shell">
   <div class="flex w-full">
     <%= render partial: "form" %>
     <% if @candidates.size > 0 %>
@@ -30,7 +30,7 @@
             <%= render partial: "candidate", collection: @candidates, as: :candidate, cached: false %>
           </tbody>
         </table>
-        <div class="flex justify-end invisible mt-2 mb-6 mr-2" data-infinite-scroll-target="pagination">
+        <div class="report-actions-row-muted" data-infinite-scroll-target="pagination">
           <%== render partial: "shared/paginator", locals: { pagy: @pagy } %>
         </div>
       </div>

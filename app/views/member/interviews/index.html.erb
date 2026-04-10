@@ -1,14 +1,10 @@
-
-
 <div class="stack-fill">
-  
   <div class="content-shell">
-    
     <div class="sidebar-shell"><%= render partial: "member/profile", locals: { member: @member } %></div>
 
     <div class="flex-1">
-      
       <%= render partial: "member/nav", locals: { member: @member } %>
+
       <div class="table-wrap">
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
           <thead class="table-head-muted">
@@ -16,20 +12,25 @@
               <th scope="col" class="px-4 py-2">
                 Interview
               </th>
+
               <th scope="col" class="px-4 py-2">
                 Candidate
               </th>
+
               <th scope="col" class="px-4 py-2">
                 Date
               </th>
+
               <th scope="col" class="px-4 py-2">
                 Status
               </th>
+
               <th scope="col" class="px-4 py-2">
                 Action
               </th>
             </tr>
           </thead>
+
           <tbody>
             <tr class="table-row-hover">
               <th scope="row" class="flex items-center px-4 py-2 text-gray-900 whitespace-nowrap dark:text-white">
@@ -37,21 +38,24 @@
                   <div class="text-sm font-semibold">Online Interview</div>
                 </div>
               </th>
+
               <td class="px-4 py-2">
                 Aashish Dhawan
               </td>
+
               <td class="px-4 py-2">
                 Jun 22, 2024 10:00 AM
               </td>
+
               <td class="px-4 py-2">
                 <div class="flex items-center">
                   <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
                   Online
                 </div>
               </td>
+
               <td class="px-4 py-2">
-                
-                <a href="#" type="button" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                <button type="button" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</button>
               </td>
             </tr>
           </tbody>
@@ -59,8 +63,6 @@
       </div>
     </div>
 
-    <div class="sidebar-panel">
-      
-    </div>
+    <div class="sidebar-panel"></div>
   </div>
 </div>

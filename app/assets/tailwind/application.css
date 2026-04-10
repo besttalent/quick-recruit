@@ -57,6 +57,74 @@
   @apply text-gray-300 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-sm text-sm font-medium;
 }
 
+.navbar-max {
+  @apply mx-auto max-w-screen-2xl sm:px-6 lg:px-8;
+}
+
+.navbar-row {
+  @apply relative flex h-12 items-center justify-between;
+}
+
+.navbar-main {
+  @apply flex flex-1 items-center justify-center sm:items-stretch sm:justify-start;
+}
+
+.navbar-mobile-toggle {
+  @apply absolute inset-y-0 left-0 flex items-center sm:hidden;
+}
+
+.navbar-brand-wrap {
+  @apply flex items-center flex-shrink-0;
+}
+
+.navbar-brand-text {
+  @apply text-white font-extrabold font-mono;
+}
+
+.navbar-search-wrap {
+  @apply flex w-96 px-2 lg:ml-6 lg:justify-end;
+}
+
+.navbar-search-input {
+  @apply block w-full py-1 pl-10 pr-3 leading-5 text-gray-300 placeholder-gray-400 bg-gray-700 border border-transparent rounded-xs focus:outline-hidden focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 sm:text-sm;
+}
+
+.navbar-right {
+  @apply absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-2 sm:pr-0;
+}
+
+.navbar-notification {
+  @apply relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-hidden focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800;
+}
+
+.navbar-user-block {
+  @apply hidden sm:ml-2 sm:block;
+}
+
+.navbar-user-button {
+  @apply relative flex rounded-full bg-gray-800 text-sm focus:outline-hidden focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800;
+}
+
+.navbar-user-menu {
+  @apply absolute left-0 z-10 block w-full mt-2 origin-top-right bg-white rounded-xs shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-hidden;
+}
+
+.navbar-user-menu-items {
+  @apply hidden absolute divide-y divide-gray-200 right-0 z-10 mt-2 w-48 origin-top-right rounded-xs bg-white py-1 shadow-lg ring-1 ring-gray-200 ring-opacity-5 focus:outline-hidden border border-gray-200 dark:bg-gray-700 dark:divide-gray-600;
+}
+
+.navbar-user-name {
+  @apply block text-sm text-gray-900 dark:text-white;
+}
+
+.navbar-user-email {
+  @apply block text-xs text-gray-500 truncate dark:text-gray-400;
+}
+
+.navbar-dropdown-anchor {
+  @apply w-full max-w-xs lg:max-w-sm justify-end;
+}
+
 .svg-icon {
   @apply text-gray-400 group-hover:text-gray-500 shrink-0 -ml-1 mr-3 h-6 w-6;
 }
@@ -381,6 +449,58 @@
   @apply items-center justify-between p-1 sm:flex dark:bg-gray-700 dark:border-gray-600;
 }
 
+.report-stat-value {
+  @apply text-base font-normal text-center text-gray-900;
+}
+
+.report-filter-wrap {
+  @apply relative inline-block px-3 text-left;
+}
+
+.report-sidebar-panel {
+  @apply flex flex-col pt-5 pb-4 border-r border-gray-200;
+}
+
+.report-actions-row-muted {
+  @apply flex justify-end invisible mt-2 mb-6 mr-2;
+}
+
+.report-main-scroll {
+  @apply relative z-0 flex-1 overflow-y-auto focus:outline-hidden;
+}
+
+.report-main-shell {
+  @apply flex w-full overflow-hidden bg-white;
+}
+
+.report-header-row {
+  @apply flex flex-wrap items-baseline;
+}
+
+.reports-nav-item {
+  @apply flex items-center px-3 py-1 text-sm text-gray-600 rounded-sm group hover:text-gray-900 hover:bg-gray-50;
+}
+
 .page-bg-shell {
   @apply bg-gray-50 dark:bg-gray-900 py-3 sm:py-5 min-h-screen;
+}
+
+.settings-grid {
+  @apply lg:grid lg:grid-cols-12 lg:gap-x-5;
+}
+
+.settings-shell {
+  @apply max-w-7xl mx-auto pb-10 lg:py-12 lg:px-8;
+}
+
+.settings-content {
+  @apply max-w-xl pb-12 px-4 lg:col-span-6;
+}
+
+.auth-shell {
+  @apply flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0;
+}
+
+.auth-brand {
+  @apply flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white;
 }
