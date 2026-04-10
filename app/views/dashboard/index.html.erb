@@ -1,9 +1,9 @@
 <main class="relative z-0 flex-1 overflow-y-auto focus:outline-hidden">
   <main class="pb-8">
     <div class="px-4 sm:px-6">
-      <!-- Main 3 column grid -->
+      
       <div class="grid items-start grid-cols-1 gap-2 lg:grid-cols-3 lg:gap-2">
-        <!-- Left column -->
+        
         <div class="grid grid-cols-1 gap-4 lg:col-span-2">
           <% unless current_user.interviewer? %>
             <section aria-labelledby="participants_section">
@@ -22,7 +22,7 @@
             <p class="pb-2 mt-1 text-sm font-medium text-gray-900 truncate"><%= "Hello #{current_user.name}" %></p>
           <% end %>
         </div>
-        <!-- Right column -->
+        
         <div class="grid grid-cols-1 gap-4 xl:border-l xl:border-gray-200">
           <div class="p-4">
             <div class="flex flex-wrap">

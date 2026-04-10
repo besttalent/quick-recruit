@@ -7,7 +7,7 @@
         <div class="flex items-center flex-shrink-0"><a href="/"><h1 class="text-white font-extrabold font-mono">Quick Recruit</h1>        </a></div>
         <div class="hidden sm:ml-2 sm:block">
           <div class="flex space-x-1">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-500 hover:text-white" -->
+            
             <a href="<%= members_path %>" class="<%= current_page?(members_path) ? "nav-selected" : "nav-unselected" %>">Team</a>
             <a href="<%= candidates_path %>" class="<%= current_page?(candidates_path) ? "nav-selected" : "nav-unselected" %>">Candidates</a>
             <a href="<%= pipeline_candidates_path %>" class="<%= current_page?(pipeline_candidates_path) ? "nav-selected" : "nav-unselected" %>">Pipeline</a>
@@ -28,7 +28,7 @@
         <div class="w-full max-w-xs lg:max-w-sm justify-end">
           <div class="relative">
             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-              <!-- Heroicon name: solid/search -->
+              
               <%= svg_icon("search", class_name: "w-5 h-5 text-gray-400") %>
             </div>
             <input
@@ -62,7 +62,7 @@
           <%= svg_icon("plus", class_name: "h-6 w-6") %>
         </a>
 
-        <!-- Profile dropdown -->
+        
         <div class="relative ml-3">
           <div>
             <button

@@ -1,20 +1,13 @@
-<!--
-  This example requires updating your template:
 
-  ```
-  <html class="h-full bg-white">
-  <body class="h-full">
-  ```
--->
 
 <div class="stack-fill">
-  <!-- 3 column wrapper -->
+  
   <div class="content-shell">
-    <!-- Left sidebar & main wrapper -->
+    
     <div class="sidebar-shell"><%= render partial: "candidate/profile", locals: { candidate: @candidate } %></div>
 
     <div class="flex-1">
-      <!-- Main area -->
+      
       <%= render partial: "candidate/nav", locals: { candidate: @candidate } %>
 
       <div class="table-wrap">
@@ -50,7 +43,7 @@
 
     <div class="shrink-0 border-t border-gray-200 px-4 py-4 sm:px-6 lg:w-80 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6">
       <% if (!@candidate.opening.nil? and @candidate.opening.active?) or current_user.admin_or_recruiter_admin? %>
-        <!-- Right column area -->
+        
         <div>
           <h5 class="mr-3 font-semibold dark:text-white">Send Email</h5>
 

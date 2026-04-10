@@ -215,7 +215,7 @@
 }
 
 .heading-lg-soft {
-  @apply mr-3 text-lg font-semibold dark:text-white;
+  @apply heading-lg-soft;
 }
 
 .body-muted {

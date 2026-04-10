@@ -1,6 +1,6 @@
 <aside class="px-2 py-6 sm:px-6 lg:py-0 lg:px-0 lg:col-span-3">
   <nav class="space-y-1" id="menu">
-    <a href="<%= account_roles_path %>" class="<%= current_page?(account_roles_path) ? "selected" : "unselected" %>"><!-- Heroicon name: outline/user-circle --><%= svg_icon("user-circle-outline", class_name: "svg-icon") %><span class="truncate">Roles</span></a>
-    <a href="<%= account_sources_path %>" class="<%= current_page?(account_sources_path) ? "selected" : "unselected" %>"><!-- Heroicon name: outline/user-circle --><%= svg_icon("building-outline", class_name: "svg-icon") %><span class="truncate">Sources</span></a>
+    <a href="<%= account_roles_path %>" class="<%= current_page?(account_roles_path) ? "selected" : "unselected" %>"><%= svg_icon("user-circle-outline", class_name: "svg-icon") %><span class="truncate">Roles</span></a>
+    <a href="<%= account_sources_path %>" class="<%= current_page?(account_sources_path) ? "selected" : "unselected" %>"><%= svg_icon("building-outline", class_name: "svg-icon") %><span class="truncate">Sources</span></a>
   </nav>
 </aside>
