@@ -11,7 +11,7 @@
       <%= render partial: "member/nav", locals: { member: @member } %>
       <div class="table-wrap">
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <thead class="table-head-muted">
             <tr>
               <th scope="col" class="px-4 py-2">
                 Interview
@@ -31,7 +31,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <tr class="table-row-hover">
               <th scope="row" class="flex items-center px-4 py-2 text-gray-900 whitespace-nowrap dark:text-white">
                 <div>
                   <div class="text-sm font-semibold">Online Interview</div>
@@ -59,7 +59,7 @@
       </div>
     </div>
 
-    <div class="shrink-0 border-t border-gray-200 px-4 py-6 sm:px-6 lg:w-80 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6">
+    <div class="sidebar-panel">
       
     </div>
   </div>

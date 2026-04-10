@@ -1,7 +1,7 @@
 <li class="timeline-item">
   <span class="timeline-node"><%= display_xsmall_avatar(event.user) %></span>
   <div class="toolbar-compact">
-    <time class="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0"><%= display_created_at_with_time(event) %></time>
+    <time class="timeline-meta-muted"><%= display_created_at_with_time(event) %></time>
     <div class="body-muted">
       <a href="<%= member_timeline_path(event.user) %>" class="link-strong-underline"><%= event.user.name %></a>
       added a new note

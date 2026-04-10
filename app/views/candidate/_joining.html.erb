@@ -2,7 +2,7 @@
   <% if candidate.joinings? %>
     <div>
       <div class="flex items-center">
-        <dt class="font-semibold text-sm leading-none text-gray-900 dark:text-white">Change Joining Date</dt>
+        <dt class="heading-sm-strong">Change Joining Date</dt>
         <% if policy(candidate).update_joining? %>
           <div id="changeStatusButton" data-tooltip-target="tooltip-joining" class="cursor-pointer p-1 ml-1 text-gray-500 rounded-xs hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
             <a href="<%= candidate_edit_joining_path(candidate) %>">

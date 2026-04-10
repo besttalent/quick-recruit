@@ -16,14 +16,14 @@
         
         <%= render partial: "stats", locals: { stats: @stats } %>
         <table class="input-muted">
-          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <thead class="table-head-muted">
             <tr>
               <th scope="col" class="px-4 py-3">Name</th>
               <th scope="col" class="px-4 py-3">Job Association</th>
-              <th scope="col" class="px-4 py-3 whitespace-nowrap">Added By</th>
-              <th scope="col" class="px-4 py-3 whitespace-nowrap">Created On</th>
-              <th scope="col" class="px-4 py-3 whitespace-nowrap">Bucket</th>
-              <th scope="col" class="px-4 py-3 whitespace-nowrap">Status</th>
+              <th scope="col" class="table-head-cell">Added By</th>
+              <th scope="col" class="table-head-cell">Created On</th>
+              <th scope="col" class="table-head-cell">Bucket</th>
+              <th scope="col" class="table-head-cell">Status</th>
             </tr>
           </thead>
           <tbody class="table-body" data-infinite-scroll-target="entries">

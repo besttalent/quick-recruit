@@ -38,10 +38,10 @@
 
       <%= render partial: "candidate/social", locals: { candidate: member } %>
 
-      <dt class="mb-2 font-semibold text-sm leading-none text-gray-900 dark:text-white">Role</dt>
+      <dt class="mb-2 heading-sm-strong">Role</dt>
 
       <dd class="mb-4 sm:mb-5">
-        <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2 py-0.5 rounded-sm dark:bg-primary-200 dark:text-primary-800"><%= svg_icon("candidate-eye", class_name: "mr-1 w-3 h-3") %><%= member.role.titleize %></span>
+        <span class="badge-primary-soft"><%= svg_icon("candidate-eye", class_name: "mr-1 w-3 h-3") %><%= member.role.titleize %></span>
       </dd>
 
       <dt class="mb-2 font-semibold leading-none text-gray-900 text-sm dark:text-white">Professional Details</dt>

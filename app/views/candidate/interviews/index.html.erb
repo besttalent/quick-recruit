@@ -1,56 +1,60 @@
-
-
 <div class="stack-fill">
-  
   <div class="content-shell">
-    
     <div class="sidebar-shell"><%= render partial: "candidate/profile", locals: { candidate: @candidate } %></div>
 
     <div class="flex-1">
-      
       <%= render partial: "candidate/nav", locals: { candidate: @candidate } %>
+
       <div class="table-wrap">
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <thead class="table-head-muted">
             <tr>
               <th scope="col" class="px-4 py-2">
                 Interview
               </th>
+
               <th scope="col" class="px-4 py-2">
                 Interviewer
               </th>
+
               <th scope="col" class="px-4 py-2">
                 Date
               </th>
+
               <th scope="col" class="px-4 py-2">
                 Status
               </th>
+
               <th scope="col" class="px-4 py-2">
                 Action
               </th>
             </tr>
           </thead>
+
           <tbody>
-            <tr class="bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <tr class="table-row-hover">
               <th scope="row" class="flex items-center px-4 py-2 text-gray-900 whitespace-nowrap dark:text-white">
                 <div>
                   <div class="text-sm font-semibold">Online Interview</div>
                 </div>
               </th>
+
               <td class="px-4 py-2">
                 Aashish Dhawan
               </td>
+
               <td class="px-4 py-2">
                 Jun 22, 2024 10:00 AM
               </td>
+
               <td class="px-4 py-2">
                 <div class="flex items-center">
                   <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
                   Online
                 </div>
               </td>
+
               <td class="px-4 py-2">
-                
                 <a href="#" type="button" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
               </td>
             </tr>
@@ -59,26 +63,28 @@
       </div>
     </div>
 
-    <div class="shrink-0 border-t border-gray-200 px-4 py-6 sm:px-6 lg:w-80 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6">
-      
-       <div>
-        <h5 class="mr-3 font-semibold dark:text-white">Select Interviewers</h5>
-        <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Click on interviewer to open their calendar to schedule an interview.</p>
+    <div class="sidebar-panel">
+      <div>
+        <h5 class="panel-title">Select Interviewers</h5>
+
+        <p class="text-muted-sm-spaced">Click on interviewer to open their calendar to schedule an interview.</p>
+
         <% @interviewers.each do |interviewer| %>
           <div class="flex space-y-2">
             <% if interviewer.booking_url.present? %>
-            <a class ="link" href="<%= interviewer.booking_url %>" target="_blank"><%= interviewer.name %></a>
+              <a class="link" href="<%= interviewer.booking_url %>" target="_blank"><%= interviewer.name %></a>
             <% else %>
-            <span class="text-gray-500 font-medium text-sm dark:text-gray-200"><%= interviewer.name %> </span>
+              <span class="text-gray-500 font-medium text-sm dark:text-gray-200"><%= interviewer.name %></span>
             <% end %>
           </div>
-        <% end %> 
+        <% end %>
+
         <% if @interviewers.empty? %>
           <p class="text-gray-500 dark:text-gray-400 text-xs mb-4">No interviewers have been assigned for this opening yet.</p>
         <% else %>
-        <p class="text-gray-500 dark:text-gray-400 text-xs mb-4 mt-2">If an interviewer does not have a calendar link, the interviewer name will appear as disabled.</p>
+          <p class="text-gray-500 dark:text-gray-400 text-xs mb-4 mt-2">If an interviewer does not have a calendar link, the interviewer name will appear as disabled.</p>
         <% end %>
-        
+      </div>
     </div>
   </div>
 </div>

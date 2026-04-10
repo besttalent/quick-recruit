@@ -11,7 +11,7 @@
       <%= render partial: "member/nav", locals: { member: @member } %>
       <div class="table-wrap">
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <thead class="table-head-muted">
             <tr>
               <th scope="col w-full" class="px-4 py-2">
                 Title
@@ -32,13 +32,13 @@
       </div>
     </div>
 
-    <div class="shrink-0 border-t border-gray-200 px-4 py-6 sm:px-6 lg:w-80 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6">
+    <div class="sidebar-panel">
       
       <% if current_user.admin_or_recruiter_admin? %>
         <div>
-          <h5 class="mr-3 font-semibold dark:text-white">Submit New Feedback</h5>
+          <h5 class="panel-title">Submit New Feedback</h5>
 
-          <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Submit a new feedback which can help your team members.</p>
+          <p class="text-muted-sm-spaced">Submit a new feedback which can help your team members.</p>
           <a href="<%= new_member_feedback_path(@member) %>" class="btn-primary">Submit Feedback</a>
         </div>
       <% end %>

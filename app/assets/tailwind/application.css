@@ -74,8 +74,16 @@
   @apply px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase whitespace-nowrap;
 }
 
+.table-head-cell {
+  @apply px-4 py-3 whitespace-nowrap;
+}
+
 .table-cell {
   @apply px-6 py-4 overflow-auto text-sm text-gray-700 max-w-full;
+}
+
+.table-cell-strong {
+  @apply px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white;
 }
 
 .table {
@@ -84,6 +92,10 @@
 
 .table-body {
   @apply bg-white divide-y divide-gray-200;
+}
+
+.table-head-muted {
+  @apply text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400;
 }
 
 /* Tab components */
@@ -166,6 +178,10 @@
   @apply font-medium text-gray-900 hover:underline;
 }
 
+.link-strong-subtle {
+  @apply font-medium text-gray-900 hover:text-gray-600 hover:underline;
+}
+
 .text-muted-sm {
   @apply text-gray-500 dark:text-gray-400 text-sm;
 }
@@ -194,6 +210,10 @@
   @apply border-b border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700;
 }
 
+.table-row-hover {
+  @apply bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600;
+}
+
 .hover-reveal-link {
   @apply font-medium ml-2 invisible group-hover:visible text-primary-600 dark:text-primary-500 inline-flex items-center;
 }
@@ -218,6 +238,14 @@
   @apply text-lg font-semibold dark:text-white;
 }
 
+.panel-title {
+  @apply mr-3 font-semibold dark:text-white;
+}
+
+.heading-sm-strong {
+  @apply font-semibold text-sm leading-none text-gray-900 dark:text-white;
+}
+
 .page-heading {
   @apply text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white;
 }
@@ -227,6 +255,10 @@
 
 .timeline-item {
   @apply mb-4 ms-6;
+}
+
+.timeline-meta-muted {
+  @apply mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0;
 }
 
 .timeline-node {
@@ -239,6 +271,10 @@
 
 .sidebar-shell {
   @apply w-80 xl:flex min-h-screen;
+}
+
+.sidebar-panel {
+  @apply shrink-0 border-t border-gray-200 px-4 py-6 sm:px-6 lg:w-80 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6;
 }
 
 .stack-fill {
@@ -281,6 +317,14 @@
   @apply font-medium text-gray-500;
 }
 
+.badge-primary-soft {
+  @apply bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2 py-0.5 rounded-sm dark:bg-primary-200 dark:text-primary-800;
+}
+
+.text-muted-sm-spaced {
+  @apply text-gray-500 dark:text-gray-400 text-sm mb-4;
+}
+
 .overlay-hitbox {
   @apply absolute -inset-1.5;
 }
@@ -315,4 +359,8 @@
 
 .toolbar-compact {
   @apply items-center justify-between p-1 sm:flex dark:bg-gray-700 dark:border-gray-600;
+}
+
+.page-bg-shell {
+  @apply bg-gray-50 dark:bg-gray-900 py-3 sm:py-5 min-h-screen;
 }

@@ -12,11 +12,11 @@
       <div class="p-6 text-sm"></div>
     </div>
 
-    <div class="shrink-0 border-t border-gray-200 px-4 py-6 sm:px-6 lg:w-80 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6">
+    <div class="sidebar-panel">
       
       <div>
-        <h5 class="mr-3 font-semibold dark:text-white">Create Interview Panel</h5>
-        <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Following list shows all the interviewers in the team. Select interviewers who will be conducting the interviews for this opening and create an interview panel.</p>
+        <h5 class="panel-title">Create Interview Panel</h5>
+        <p class="text-muted-sm-spaced">Following list shows all the interviewers in the team. Select interviewers who will be conducting the interviews for this opening and create an interview panel.</p>
 
         <div data-controller="opening">
           <% @interviewer_options.each do |interviewer| %>

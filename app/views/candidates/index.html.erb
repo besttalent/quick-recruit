@@ -18,7 +18,7 @@
       <%= tooltip_component(id: "tooltip-hot", text: "This bucket contains those candidates which we need to look and decide when to process.", class_name: "max-w-sm") %>
       <div class="bucket-card-body">
         <div class="bucket-card-content">
-          <a href="/candidates/hot" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Hot</a>
+          <a href="/candidates/hot" class="link-strong-subtle">Hot</a>
           <p class="text-gray-500"><%= @hot_count %>  Candidates</p>
         </div>
       </div>
@@ -28,7 +28,7 @@
       <%= tooltip_component(id: "tooltip-pipeline", text: "This bucket contains those candidates which are currently in our pipeline under various sprints.", class_name: "max-w-sm") %>
       <div class="bucket-card-body">
         <div class="bucket-card-content">
-          <a href="/candidates/pipeline" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Pipeline</a>
+          <a href="/candidates/pipeline" class="link-strong-subtle">Pipeline</a>
           <p class="text-gray-500"><%= @pipeline_count %>  Candidates</p>
         </div>
       </div>
@@ -38,7 +38,7 @@
       <%= tooltip_component(id: "tooltip-champions", text: "This bucket contains those candidates which cleared our process but did not join us and we might consider them in future.", class_name: "max-w-sm") %>
       <div class="bucket-card-body">
         <div class="bucket-card-content">
-          <a href="/candidates/champions" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Champions</a>
+          <a href="/candidates/champions" class="link-strong-subtle">Champions</a>
           <p class="text-gray-500"><%= @champions_count %>  Candidates</p>
         </div>
       </div>
@@ -48,7 +48,7 @@
       <%= tooltip_component(id: "tooltip-employees", text: "This bucket contains those candidates who are currently part of us.", class_name: "max-w-sm") %>
       <div class="bucket-card-body">
         <div class="bucket-card-content">
-          <a href="/candidates/employees" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Employees</a>
+          <a href="/candidates/employees" class="link-strong-subtle">Employees</a>
           <p class="text-gray-500"><%= @employees_count %>  Candidates</p>
         </div>
       </div>
@@ -60,7 +60,7 @@
       <%= tooltip_component(id: "tooltip-leads", text: "This bucket contains those leads which were collected from our career portal.", class_name: "max-w-sm") %>
       <div class="bucket-card-body">
         <div class="bucket-card-content">
-          <a href="/candidates/leads" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Leads</a>
+          <a href="/candidates/leads" class="link-strong-subtle">Leads</a>
           <p class="text-gray-500"><%= @leads_count %>  Candidates</p>
         </div>
       </div>
@@ -70,7 +70,7 @@
       <%= tooltip_component(id: "tooltip-new", text: "This bucket contains newly added candidates and need review.", class_name: "max-w-sm") %>
       <div class="bucket-card-body">
         <div class="bucket-card-content">
-          <a href="/candidates/recent" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Recent</a>
+          <a href="/candidates/recent" class="link-strong-subtle">Recent</a>
           <p class="text-gray-500"><%= @recent_count %> Candidates</p>
         </div>
       </div>
@@ -80,7 +80,7 @@
       <%= tooltip_component(id: "tooltip-alumni", text: "This bucket contains those candidates who are no longer with us.", class_name: "max-w-sm") %>
       <div class="bucket-card-body">
         <div class="bucket-card-content">
-          <a href="/candidates/alumni" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Alumni</a>
+          <a href="/candidates/alumni" class="link-strong-subtle">Alumni</a>
           <p class="text-gray-500"><%= @alumni_count %>  Candidates</p>
         </div>
       </div>
@@ -90,7 +90,7 @@
       <%= tooltip_component(id: "tooltip-contractors", text: "This bucket contains those candidates which have worked with us as contractors in past.", class_name: "max-w-sm") %>
       <div class="bucket-card-body">
         <div class="bucket-card-content">
-          <a href="/candidates/contractors" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Contractors</a>
+          <a href="/candidates/contractors" class="link-strong-subtle">Contractors</a>
           <p class="text-gray-500"><%= @contractors_count %>  Candidates</p>
         </div>
       </div>
@@ -102,7 +102,7 @@
       <%= tooltip_component(id: "tooltip-incomplete", text: "This bucket contains those candidates for which we do not have enough data.", class_name: "max-w-sm") %>
       <div class="bucket-card-body">
         <div class="bucket-card-content">
-          <a href="/candidates/incomplete" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Incomplete</a>
+          <a href="/candidates/incomplete" class="link-strong-subtle">Incomplete</a>
           <p class="text-gray-500"><%= @incomplete_count %>  Candidates</p>
         </div>
       </div>
@@ -112,7 +112,7 @@
       <%= tooltip_component(id: "tooltip-joinings", text: "This bucket contains those candidates which are joining in next few days.", class_name: "max-w-sm") %>
       <div class="bucket-card-body">
         <div class="bucket-card-content">
-          <a href="/candidates/joinings" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Joinings</a>
+          <a href="/candidates/joinings" class="link-strong-subtle">Joinings</a>
           <p class="text-gray-500"><%= @joinings_count %>  Candidates</p>
         </div>
       </div>
@@ -122,7 +122,7 @@
       <%= tooltip_component(id: "tooltip-icebox", text: "This bucket contains those candidate which should be followed up with after some time.", class_name: "max-w-sm") %>
       <div class="bucket-card-body">
         <div class="bucket-card-content">
-          <a href="/candidates/icebox" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Icebox</a>
+          <a href="/candidates/icebox" class="link-strong-subtle">Icebox</a>
           <p class="text-gray-500"><%= @icebox_count %>  Candidates</p>
         </div>
       </div>
@@ -132,7 +132,7 @@
       <%= tooltip_component(id: "tooltip-archived", text: "This bucket contains those candidates which are not fit for us and we might not consider in future as well.", class_name: "max-w-sm") %>
       <div class="bucket-card-body">
         <div class="bucket-card-content">
-          <a href="/candidates/archive" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Archive</a>
+          <a href="/candidates/archive" class="link-strong-subtle">Archive</a>
           <p class="text-gray-500"><%= @archive_count %>  Candidates</p>
         </div>
       </div>
@@ -144,7 +144,7 @@
       <%= tooltip_component(id: "tooltip-nurture", text: "This bucket contains those candidates which we need to nurture.", class_name: "max-w-sm") %>
       <div class="bucket-card-body">
         <div class="bucket-card-content">
-          <a href="/candidates/nurture" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Nurture</a>
+          <a href="/candidates/nurture" class="link-strong-subtle">Nurture</a>
           <p class="text-gray-500"><%= @nurture_count %>  Candidates</p>
         </div>
       </div>
@@ -154,7 +154,7 @@
       <%= tooltip_component(id: "tooltip-inbound", text: "This bucket contains those candidates which we received through inbound channels.", class_name: "max-w-sm") %>
       <div class="bucket-card-body">
         <div class="bucket-card-content">
-          <a href="/candidates/inbound" class="font-medium text-gray-900 hover:text-gray-600 hover:underline">Inbound</a>
+          <a href="/candidates/inbound" class="link-strong-subtle">Inbound</a>
           <p class="text-gray-500"><%= @inbound_count %>  Candidates</p>
         </div>
       </div>

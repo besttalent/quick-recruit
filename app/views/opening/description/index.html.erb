@@ -13,11 +13,11 @@
         <%= @opening.description %>
       </div>
     </div>
-    <div class="shrink-0 border-t border-gray-200 px-4 py-6 sm:px-6 lg:w-80 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6">
+    <div class="sidebar-panel">
       
       <div>
-        <h5 class="mr-3 font-semibold dark:text-white">Edit Job Description </h5>
-        <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Job Descriptions are open to public and can also be sent to candidates via emails.</p>
+        <h5 class="panel-title">Edit Job Description </h5>
+        <p class="text-muted-sm-spaced">Job Descriptions are open to public and can also be sent to candidates via emails.</p>
         <div class="flex space-x-2">
           <a type="button" href="<%= edit_opening_description_path(@opening, @opening) %>"
                 class="btn-primary">

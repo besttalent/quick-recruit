@@ -11,7 +11,7 @@
       <%= render partial: "candidate/nav", locals: { candidate: @candidate } %>
       <div class="table-wrap">
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <thead class="table-head-muted">
             <tr>
               <th scope="col" class="px-4 py-2">
                 Sprint Name
@@ -34,20 +34,20 @@
         </table>
       </div>
     </div>
-    <div class="shrink-0 border-t border-gray-200 px-4 py-6 sm:px-6 lg:w-80 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6">
+    <div class="sidebar-panel">
       
       <% if policy(@candidate).update_campaign? %>
         <div>
-          <h5 class="mr-3 font-semibold dark:text-white">Sprint</h5>
-          <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Manage which sprint this candidate belongs to by selecting the correct sprint.</p>
+          <h5 class="panel-title">Sprint</h5>
+          <p class="text-muted-sm-spaced">Manage which sprint this candidate belongs to by selecting the correct sprint.</p>
           <%= render partial: "candidate/campaign", locals: { candidate: @candidate } %>
 
         </div>
       <% else %>
-        <h5 class="mr-3 font-semibold dark:text-white mb-2">Sprint</h5>
+        <h5 class="panel-title mb-2">Sprint</h5>
         <p class="text-gray-500 dark:text-gray-400 text-sm mb-1">Candidates can be added to a sprint to track a sprint progress. </p>
         <p class="text-gray-500 dark:text-gray-400 text-sm mb-1">Although sprint for a candidate can be changed only when a candidate has been moved to pipeline bucket.</p>
-        <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">If you want to assign this candidate to any sprint, please ensure candidate is in pipeline bucket.</p>
+        <p class="text-muted-sm-spaced">If you want to assign this candidate to any sprint, please ensure candidate is in pipeline bucket.</p>
       <% end %>
     </div>
   </div>

@@ -16,12 +16,12 @@
       </div>
     </div>
 
-    <div class="shrink-0 border-t border-gray-200 px-4 py-6 sm:px-6 lg:w-80 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6">
+    <div class="sidebar-panel">
       
       <div>
-        <h5 class="mr-3 font-semibold dark:text-white">Quick Actions</h5>
+        <h5 class="panel-title">Quick Actions</h5>
 
-        <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Select which actions you want to perform with this candidate.</p>
+        <p class="text-muted-sm-spaced">Select which actions you want to perform with this candidate.</p>
 
         <%= render partial: "candidate/status", locals: { candidate: @candidate } %>
         <%= render partial: "candidate/joining", locals: { candidate: @candidate } %>

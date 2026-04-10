@@ -1,7 +1,7 @@
 <% candidate = recycle.candidate %>
 
 <tr class="group hover-list-row">
-  <th scope="row" class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+  <th scope="row" class="table-cell-strong">
     <div class="inline-link-row">
       <a href="<%= candidate_timeline_path(candidate) %>" class="flex items-center"><% if recycle.recycled? %><%= svg_icon("check-circle", class_name: "w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0") %><% else %><%= svg_icon("check-circle", class_name: "w-3.5 h-3.5 me-2 text-gray-500 dark:text-gray-400 flex-shrink-0") %><% end %><%= candidate.name %></a>
       <a href="<%= candidate_timeline_path(candidate) %>" class="hover-reveal-link"><%= svg_icon("candidate-eye", class_name: "w-4 h-4 text-gray-800 dark:text-white") %></a>
@@ -29,7 +29,7 @@
   <td class="px-4 py-2"><%= time_ago_in_words(recycle.created_at) %></td>
 
   <td class="px-4 py-2">
-    <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2 py-0.5 rounded-sm dark:bg-primary-200 dark:text-primary-800"><%= candidate.bucket.titleize %></span>
+    <span class="badge-primary-soft"><%= candidate.bucket.titleize %></span>
   </td>
 
   <td class="px-4 py-2">

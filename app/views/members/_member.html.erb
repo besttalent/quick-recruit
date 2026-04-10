@@ -1,5 +1,5 @@
-<tr class="border-b border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-  <th scope="row" class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+<tr class="header-list-row">
+  <th scope="row" class="table-cell-strong">
     <div class="flex items-center">
       <%= display_small_avatar(member) %>
       <a href="<%= member_timeline_path(member) %>" class="ml-2 hover:underline"><%= member.name %></a>
@@ -25,7 +25,7 @@
     -
   </td>
 
-  <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+  <td class="table-cell-strong">
     <% if member.active? %>
       <div class="flex items-center">
         <div class="status-dot-success"></div>

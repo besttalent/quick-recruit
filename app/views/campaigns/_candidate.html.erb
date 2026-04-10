@@ -1,5 +1,5 @@
 <tr class="group hover-list-row">
-  <th scope="row" class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+  <th scope="row" class="table-cell-strong">
     <div class="inline-link-row">
       <a href="<%= candidate_timeline_path(candidate) %>"><%= candidate.name %></a>
 
@@ -27,7 +27,7 @@
 
   <td class="px-4 py-2"><%= candidate.owner.name %></td>
   <td class="px-4 py-2"><%= display_date(candidate.updated_at) %></td>
-  <td class="px-4 py-2"><span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2 py-0.5 rounded-sm dark:bg-primary-200 dark:text-primary-800"><%= candidate.bucket.titleize %></span></td>
+  <td class="px-4 py-2"><span class="badge-primary-soft"><%= candidate.bucket.titleize %></span></td>
 
   <td class="px-4 py-2">
     <span class="text-xs font-medium inline-flex items-center px-2 py-0.5 rounded-sm bg-<%= status_color(candidate.status) %>-100 text-<%= status_color(candidate.status) %>-800"><%= candidate.status.humanize.titleize %></span>
