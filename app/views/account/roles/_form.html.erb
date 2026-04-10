@@ -1,9 +1,8 @@
-<%= tailwind_form_with(model: role, id: dom_id(role), url: account_roles_path) do |form| %>
-  <div class="space-y-6">
-    <%= render "shared/form_messages", resource: role, message: local_assigns[:message] %>
-    <%= render "shared/form_header", title: "Roles or Primary Skill", subtitle: "Role indicates the primary skill the person has. For Example, Android Developer or Fullstack Developer" %>
-    <%= form.text_field :title, "New Role", autocomplete: "off", required: true %>
-
-    <div class="flex justify-end"><%= form.submit "Save", class: "btn-primary" %></div>
-  </div>
-<% end %>
+<%= render "account/shared/title_resource_form",
+           resource: role,
+           create_path: account_roles_path,
+           header_title: "Roles or Primary Skill",
+           header_subtitle: "Role indicates the primary skill the person has. For Example, Android Developer or Fullstack Developer",
+           field_label: "New Role",
+           required: true,
+           message: local_assigns[:message] %>

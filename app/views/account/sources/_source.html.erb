@@ -1,13 +1,5 @@
-<%= turbo_frame_tag dom_id(source) do %>
-  <li class="flex py-4 border-b border-gray-200">
-    <div class="flex w-full ml-3">
-      <p class="w-full text-sm font-medium text-gray-900"><%= source.title.titleize %></p>
-      <div class="flex">
-        <div class="flex justify-end space-x-2">
-          <%= edit_button(edit_account_source_path(source)) %>
-          <%= delete_button(account_source_path(source)) %>
-        </div>
-      </div>
-    </div>
-  </li>
-<% end %>
+<%= render "account/shared/title_resource_row",
+           resource: source,
+           title_text: source.title.titleize,
+           edit_path: edit_account_source_path(source),
+           delete_path: account_source_path(source) %>

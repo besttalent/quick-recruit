@@ -1,13 +1,5 @@
-<%= turbo_frame_tag dom_id(role) do %>
-  <li class="flex py-4 border-b border-gray-200">
-    <div class="flex w-full ml-3">
-      <p class="w-full text-sm font-medium text-gray-900"><%= role.title %></p>
-      <div class="flex">
-        <div class="flex justify-end space-x-2">
-          <%= edit_button(edit_account_role_path(role)) %>
-          <%= delete_button(account_role_path(role)) %>
-        </div>
-      </div>
-    </div>
-  </li>
-<% end %>
+<%= render "account/shared/title_resource_row",
+           resource: role,
+           title_text: role.title,
+           edit_path: edit_account_role_path(role),
+           delete_path: account_role_path(role) %>

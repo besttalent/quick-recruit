@@ -1,0 +1,9 @@
+<%= tailwind_form_with(model: resource, id: dom_id(resource), url: create_path) do |form| %>
+  <div class="space-y-6">
+    <%= render "shared/form_messages", resource: resource, message: local_assigns[:message] %>
+    <%= render "shared/form_header", title: header_title, subtitle: header_subtitle %>
+    <%= form.text_field :title, field_label, autocomplete: "off", required: required %>
+
+    <div class="actions-row"><%= form.submit "Save", class: "btn-primary" %></div>
+  </div>
+<% end %>
