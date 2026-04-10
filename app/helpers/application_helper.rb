@@ -1,5 +1,6 @@
 module ApplicationHelper
   include AvatarHelper
+  include NavbarHelper
   include ButtonHelper
   include AutoLinkHelper
   include UrlHelper
