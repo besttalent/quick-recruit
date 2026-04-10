@@ -2,7 +2,7 @@
   <div class="page-container-wide">
     <div class="page-card">
       <div class=" divide-y dark:divide-gray-700">
-        <div class="panel-header-row">
+        <div class="page-panel-header-row">
           <div>
             <h1 class="heading-lg-soft">Incomplete Profiles</h1>
             <p class="text-muted-sm">Following <span class="font-bold"><%= @candidates.count %></span> profiles are not complete and either needs to be edited or some missing information is needed.</p>
@@ -21,7 +21,7 @@
 
         </div>
       </div>
-      <div class="scroll-x">
+      <div class="sidebar-scroll-x">
         <table class="input-muted">
           <thead class="table-head-muted">
             <tr>
@@ -39,7 +39,7 @@
           </tbody>
         </table>
       </div>
-      <div class="actions-row">
+      <div class="sidebar-actions-row">
         <%== render partial: "shared/paginator", locals: { pagy: @pagy } %>
       </div>
     </div>

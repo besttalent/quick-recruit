@@ -2,7 +2,7 @@
   <%= render "shared/error_messages", resource: member %>
   <%= render "shared/form_messages", resource: member, message: local_assigns[:message] %>
 
-  <h2 class="section-title">Personal Information</h2>
+  <h2 class="page-section-title">Personal Information</h2>
 
   <div class="form-grid-simple">
     <div><%= form.text_field :first_name, "First Name", required: true, placeholder: "John" %></div>
@@ -18,7 +18,7 @@
     <div class="sm:col-span-2"><%= form.text_area :biography, "Biography", required: true, placeholder: "Tell us about yourself..", style: "height:120px" %></div>
   </div>
 
-  <h2 class="section-title">Social Information</h2>
+  <h2 class="page-section-title">Social Information</h2>
 
   <div class="form-grid-2">
     <div><%= form.text_field :linkedin, "Linkedin", placeholder: "Linkedin Profile URL" %></div>
@@ -34,14 +34,14 @@
     <div><%= form.text_field :booking_url, "Meeting Booking URL", placeholder: "Meeting Booking URL" %></div>
   </div>
 
-  <h2 class="section-title">Professional Information</h2>
+  <h2 class="page-section-title">Professional Information</h2>
 
   <div class="form-grid-2">
     <div><%= form.text_field :current_title, "Current Job Title", placeholder: "Senior Software Engineer" %></div>
     <div><%= form.text_field :current_company, "Current Employer", placeholder: "Current Company Name" %></div>
   </div>
 
-  <h2 class="section-title">Admin Land</h2>
+  <h2 class="page-section-title">Admin Land</h2>
 
   <div class="form-grid-2">
     <div>

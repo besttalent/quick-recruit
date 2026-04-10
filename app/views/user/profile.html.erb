@@ -1,7 +1,7 @@
-<main class="settings-shell">
-  <div class="settings-grid">
+<main class="report-settings-shell">
+  <div class="report-settings-grid">
     <%= render "shared/settings_menu" %>
-    <main class="settings-content">
+    <main class="report-settings-content">
       <div class="mt-6 flex-grow lg:mt-0 lg:ml-6 lg:flex-shrink-0 lg:flex-grow-0">
         <%= turbo_frame_tag "profile_form" do %>
           <%= render "user/forms/profile", user: @user %>

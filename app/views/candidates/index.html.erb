@@ -13,41 +13,41 @@
 </section>
 <div class="mx-auto max-w-screen-2xl lg:px-8">
   <ul role="list" class="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
-    <li class="bucket-card">
+    <li class="sidebar-bucket-card">
       <button data-tooltip-target="tooltip-hot" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-red-500 rounded-l-md text-sm font-medium text-white">A</button>
       <%= tooltip_component(id: "tooltip-hot", text: "This bucket contains those candidates which we need to look and decide when to process.", class_name: "max-w-sm") %>
-      <div class="bucket-card-body">
-        <div class="bucket-card-content">
+      <div class="sidebar-bucket-card-body">
+        <div class="sidebar-bucket-card-content">
           <a href="/candidates/hot" class="link-strong-subtle">Hot</a>
           <p class="text-gray-500"><%= @hot_count %>  Candidates</p>
         </div>
       </div>
     </li>
-    <li class="bucket-card">
+    <li class="sidebar-bucket-card">
       <button data-tooltip-target="tooltip-pipeline" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-yellow-500 rounded-l-md text-sm font-medium text-white">B</button>
       <%= tooltip_component(id: "tooltip-pipeline", text: "This bucket contains those candidates which are currently in our pipeline under various sprints.", class_name: "max-w-sm") %>
-      <div class="bucket-card-body">
-        <div class="bucket-card-content">
+      <div class="sidebar-bucket-card-body">
+        <div class="sidebar-bucket-card-content">
           <a href="/candidates/pipeline" class="link-strong-subtle">Pipeline</a>
           <p class="text-gray-500"><%= @pipeline_count %>  Candidates</p>
         </div>
       </div>
     </li>
-    <li class="bucket-card">
+    <li class="sidebar-bucket-card">
       <button data-tooltip-target="tooltip-champions" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-green-500 rounded-l-md text-sm font-medium text-white">C</button>
       <%= tooltip_component(id: "tooltip-champions", text: "This bucket contains those candidates which cleared our process but did not join us and we might consider them in future.", class_name: "max-w-sm") %>
-      <div class="bucket-card-body">
-        <div class="bucket-card-content">
+      <div class="sidebar-bucket-card-body">
+        <div class="sidebar-bucket-card-content">
           <a href="/candidates/champions" class="link-strong-subtle">Champions</a>
           <p class="text-gray-500"><%= @champions_count %>  Candidates</p>
         </div>
       </div>
     </li>
-    <li class="bucket-card">
+    <li class="sidebar-bucket-card">
       <button data-tooltip-target="tooltip-employees" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-gray-500 rounded-l-md text-sm font-medium text-white">D</button>
       <%= tooltip_component(id: "tooltip-employees", text: "This bucket contains those candidates who are currently part of us.", class_name: "max-w-sm") %>
-      <div class="bucket-card-body">
-        <div class="bucket-card-content">
+      <div class="sidebar-bucket-card-body">
+        <div class="sidebar-bucket-card-content">
           <a href="/candidates/employees" class="link-strong-subtle">Employees</a>
           <p class="text-gray-500"><%= @employees_count %>  Candidates</p>
         </div>
@@ -55,41 +55,41 @@
     </li>
   </ul>
   <ul role="list" class="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
-    <li class="bucket-card">
+    <li class="sidebar-bucket-card">
       <button data-tooltip-target="tooltip-leads" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-red-500 rounded-l-md text-sm font-medium text-white">E</button>
       <%= tooltip_component(id: "tooltip-leads", text: "This bucket contains those leads which were collected from our career portal.", class_name: "max-w-sm") %>
-      <div class="bucket-card-body">
-        <div class="bucket-card-content">
+      <div class="sidebar-bucket-card-body">
+        <div class="sidebar-bucket-card-content">
           <a href="/candidates/leads" class="link-strong-subtle">Leads</a>
           <p class="text-gray-500"><%= @leads_count %>  Candidates</p>
         </div>
       </div>
     </li>
-    <li class="bucket-card">
+    <li class="sidebar-bucket-card">
       <button data-tooltip-target="tooltip-new" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-yellow-500 rounded-l-md text-sm font-medium text-white">F</button>
       <%= tooltip_component(id: "tooltip-new", text: "This bucket contains newly added candidates and need review.", class_name: "max-w-sm") %>
-      <div class="bucket-card-body">
-        <div class="bucket-card-content">
+      <div class="sidebar-bucket-card-body">
+        <div class="sidebar-bucket-card-content">
           <a href="/candidates/recent" class="link-strong-subtle">Recent</a>
           <p class="text-gray-500"><%= @recent_count %> Candidates</p>
         </div>
       </div>
     </li>
-    <li class="bucket-card">
+    <li class="sidebar-bucket-card">
       <button data-tooltip-target="tooltip-alumni" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-green-500 rounded-l-md text-sm font-medium text-white">G</button>
       <%= tooltip_component(id: "tooltip-alumni", text: "This bucket contains those candidates who are no longer with us.", class_name: "max-w-sm") %>
-      <div class="bucket-card-body">
-        <div class="bucket-card-content">
+      <div class="sidebar-bucket-card-body">
+        <div class="sidebar-bucket-card-content">
           <a href="/candidates/alumni" class="link-strong-subtle">Alumni</a>
           <p class="text-gray-500"><%= @alumni_count %>  Candidates</p>
         </div>
       </div>
     </li>
-    <li class="bucket-card">
+    <li class="sidebar-bucket-card">
       <button data-tooltip-target="tooltip-contractors" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-gray-500 rounded-l-md text-sm font-medium text-white">H</button>
       <%= tooltip_component(id: "tooltip-contractors", text: "This bucket contains those candidates which have worked with us as contractors in past.", class_name: "max-w-sm") %>
-      <div class="bucket-card-body">
-        <div class="bucket-card-content">
+      <div class="sidebar-bucket-card-body">
+        <div class="sidebar-bucket-card-content">
           <a href="/candidates/contractors" class="link-strong-subtle">Contractors</a>
           <p class="text-gray-500"><%= @contractors_count %>  Candidates</p>
         </div>
@@ -97,41 +97,41 @@
     </li>
   </ul>
   <ul role="list" class="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
-    <li class="bucket-card">
+    <li class="sidebar-bucket-card">
       <button data-tooltip-target="tooltip-incomplete" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-red-500 rounded-l-md text-sm font-medium text-white">I</button>
       <%= tooltip_component(id: "tooltip-incomplete", text: "This bucket contains those candidates for which we do not have enough data.", class_name: "max-w-sm") %>
-      <div class="bucket-card-body">
-        <div class="bucket-card-content">
+      <div class="sidebar-bucket-card-body">
+        <div class="sidebar-bucket-card-content">
           <a href="/candidates/incomplete" class="link-strong-subtle">Incomplete</a>
           <p class="text-gray-500"><%= @incomplete_count %>  Candidates</p>
         </div>
       </div>
     </li>
-    <li class="bucket-card">
+    <li class="sidebar-bucket-card">
       <button data-tooltip-target="tooltip-joinings" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-yellow-500 rounded-l-md text-sm font-medium text-white">J</button>
       <%= tooltip_component(id: "tooltip-joinings", text: "This bucket contains those candidates which are joining in next few days.", class_name: "max-w-sm") %>
-      <div class="bucket-card-body">
-        <div class="bucket-card-content">
+      <div class="sidebar-bucket-card-body">
+        <div class="sidebar-bucket-card-content">
           <a href="/candidates/joinings" class="link-strong-subtle">Joinings</a>
           <p class="text-gray-500"><%= @joinings_count %>  Candidates</p>
         </div>
       </div>
     </li>
-    <li class="bucket-card">
+    <li class="sidebar-bucket-card">
       <button data-tooltip-target="tooltip-icebox" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-green-500 rounded-l-md text-sm font-medium text-white">K</button>
       <%= tooltip_component(id: "tooltip-icebox", text: "This bucket contains those candidate which should be followed up with after some time.", class_name: "max-w-sm") %>
-      <div class="bucket-card-body">
-        <div class="bucket-card-content">
+      <div class="sidebar-bucket-card-body">
+        <div class="sidebar-bucket-card-content">
           <a href="/candidates/icebox" class="link-strong-subtle">Icebox</a>
           <p class="text-gray-500"><%= @icebox_count %>  Candidates</p>
         </div>
       </div>
     </li>
-    <li class="bucket-card">
+    <li class="sidebar-bucket-card">
       <button data-tooltip-target="tooltip-archived" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-gray-500 rounded-l-md text-sm font-medium text-white">L</button>
       <%= tooltip_component(id: "tooltip-archived", text: "This bucket contains those candidates which are not fit for us and we might not consider in future as well.", class_name: "max-w-sm") %>
-      <div class="bucket-card-body">
-        <div class="bucket-card-content">
+      <div class="sidebar-bucket-card-body">
+        <div class="sidebar-bucket-card-content">
           <a href="/candidates/archive" class="link-strong-subtle">Archive</a>
           <p class="text-gray-500"><%= @archive_count %>  Candidates</p>
         </div>
@@ -139,21 +139,21 @@
     </li>
   </ul>
   <ul role="list" class="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
-    <li class="bucket-card">
+    <li class="sidebar-bucket-card">
       <button data-tooltip-target="tooltip-nurture" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-red-500 rounded-l-md text-sm font-medium text-white">M</button>
       <%= tooltip_component(id: "tooltip-nurture", text: "This bucket contains those candidates which we need to nurture.", class_name: "max-w-sm") %>
-      <div class="bucket-card-body">
-        <div class="bucket-card-content">
+      <div class="sidebar-bucket-card-body">
+        <div class="sidebar-bucket-card-content">
           <a href="/candidates/nurture" class="link-strong-subtle">Nurture</a>
           <p class="text-gray-500"><%= @nurture_count %>  Candidates</p>
         </div>
       </div>
     </li>
-        <li class="bucket-card">
+        <li class="sidebar-bucket-card">
       <button data-tooltip-target="tooltip-inbound" type="button" class="flex w-16 flex-shrink-0 items-center justify-center bg-yellow-500 rounded-l-md text-sm font-medium text-white">N</button>
       <%= tooltip_component(id: "tooltip-inbound", text: "This bucket contains those candidates which we received through inbound channels.", class_name: "max-w-sm") %>
-      <div class="bucket-card-body">
-        <div class="bucket-card-content">
+      <div class="sidebar-bucket-card-body">
+        <div class="sidebar-bucket-card-content">
           <a href="/candidates/inbound" class="link-strong-subtle">Inbound</a>
           <p class="text-gray-500"><%= @inbound_count %>  Candidates</p>
         </div>

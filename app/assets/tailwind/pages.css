@@ -3,11 +3,11 @@
   @apply bg-white dark:bg-gray-900;
 }
 
-.form-page-container {
+.page-form-container {
   @apply py-8 px-4 mx-auto max-w-2xl lg:py-8;
 }
 
-.section-title {
+.page-section-title {
   @apply mb-4 mt-8 text-xl font-semibold leading-none text-gray-900 dark:text-white;
 }
 
@@ -19,11 +19,11 @@
   @apply px-4 mx-auto max-w-screen-2xl lg:px-8;
 }
 
-.panel-header-row {
+.page-panel-header-row {
   @apply flex-row items-center justify-between p-4 space-y-3 sm:flex sm:space-y-0 sm:space-x-4;
 }
 
-.section-pad {
+.page-section-pad {
   @apply px-4 py-2 sm:p-2;
 }
 

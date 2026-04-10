@@ -2,7 +2,7 @@
   <span class="timeline-node">
     <%= display_xsmall_avatar(event.user) %>
   </span>
-  <div class="toolbar-compact">
+  <div class="timeline-toolbar-compact">
     <time class="timeline-meta-muted"><%= display_created_at_with_time(event) %></time>
     <div class="body-muted"><a href="<%= member_timeline_path(event.user) %>" class="link-strong-underline"><%= event.user.name %></a> moved candidate to bucket <span class="badge-primary-soft"><%= event.action_for_context %></span></div>
   </div>

@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/forms";
-@import "../stylesheets/pagy-tailwind.css";
 
 @source "../../../app/views/**/*.html.erb";
 @source "../../../app/helpers/**/*.rb";
@@ -9,6 +8,9 @@
 /* Module index */
 /* Base layer */
 @import "./theme.css";
+
+/* Pagy */
+@import "./pagy.css";
 
 /* Reusable components */
 @import "./forms.css";

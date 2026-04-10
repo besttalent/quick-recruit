@@ -1,5 +1,5 @@
 /* Sidebar and shell layout styles */
-.content-shell {
+.sidebar-content-shell {
   @apply mx-auto w-full grow lg:flex xl:px-2 -ml-4;
 }
 
@@ -11,30 +11,30 @@
   @apply shrink-0 border-t border-gray-200 px-4 py-6 sm:px-6 lg:w-80 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6;
 }
 
-.stack-fill {
+.sidebar-stack-fill {
   @apply flex min-h-full flex-col;
 }
 
-.scroll-x {
+.sidebar-scroll-x {
   @apply overflow-x-auto;
 }
 
-.list-divider {
+.sidebar-list-divider {
   @apply divide-y dark:divide-gray-700;
 }
 
-.bucket-card {
+.sidebar-bucket-card {
   @apply col-span-1 flex rounded-xs shadow-xs;
 }
 
-.bucket-card-body {
+.sidebar-bucket-card-body {
   @apply flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white;
 }
 
-.bucket-card-content {
+.sidebar-bucket-card-content {
   @apply flex-1 truncate px-4 py-2 text-sm;
 }
 
-.actions-row {
+.sidebar-actions-row {
   @apply flex justify-end mt-2 mb-6 mr-2;
 }

@@ -1,5 +1,5 @@
 <section class="page-surface">
-  <div class="form-page-container">
+  <div class="page-form-container">
     <h2 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white">Add a new candidate</h2>
 
     <%= tailwind_form_with(model: @candidate, id: dom_id(@candidate), url: candidates_path) do |form| %>
@@ -33,7 +33,7 @@
         <div class="sm:col-span-2"><%= form.text_area :biography, "Biography", placeholder: "Some personal details about candidate..", style: "height:120px" %></div>
       </div>
 
-      <h2 class="section-title">Professional Information</h2>
+      <h2 class="page-section-title">Professional Information</h2>
 
       <div class="form-grid-2">
         <div><%= form.text_field :current_title, "Current Job Title", placeholder: "Senior Software Engineer" %></div>
@@ -70,7 +70,7 @@
         </div>
       </div>
 
-      <h2 class="section-title">Social Information</h2>
+      <h2 class="page-section-title">Social Information</h2>
 
       <div class="form-grid-2">
         <div><%= form.text_field :linkedin, "Linkedin", placeholder: "Linkedin Profile URL" %></div>
@@ -82,7 +82,7 @@
         <div><%= form.text_field :twitter, "Twitter", placeholder: "Twitter Profile" %></div>
       </div>
 
-      <h2 class="section-title">Additional Information</h2>
+      <h2 class="page-section-title">Additional Information</h2>
 
       <div class="grid gap-4 md:gap-6 md:grid-cols-2 sm:mb-4">
         <div>

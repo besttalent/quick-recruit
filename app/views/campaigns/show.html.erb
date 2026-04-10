@@ -1,8 +1,8 @@
 <section class="page-bg-shell">
   <div class="page-container-wide">
     <div class="page-card">
-      <div class="list-divider">
-        <div class="panel-header-row">
+      <div class="sidebar-list-divider">
+        <div class="page-panel-header-row">
           <div>
             <h1 class="heading-lg-soft"><%= @campaign.name %></h1>
             <p class="text-muted-sm">Following <span class="font-bold"><%= @candidates.count %></span> candidates are currently in this sprint under various stages.</p>
@@ -22,7 +22,7 @@
         </div>
       </div>
 
-      <div class="scroll-x">
+      <div class="sidebar-scroll-x">
         <div class="font-medium whitespace-nowrap w-full"><%= render partial: "progress", locals: { campaign: @campaign } %></div>
         <table class="input-muted">
           <thead class="table-head-muted">

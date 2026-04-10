@@ -19,6 +19,6 @@
   @apply relative border-s border-gray-200 dark:border-gray-700;
 }
 
-.toolbar-compact {
+.timeline-toolbar-compact {
   @apply items-center justify-between p-1 sm:flex dark:bg-gray-700 dark:border-gray-600;
 }

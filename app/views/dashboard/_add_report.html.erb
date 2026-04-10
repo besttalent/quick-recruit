@@ -2,7 +2,7 @@
   <span class="timeline-node">
     <%= display_xsmall_avatar(event.user) %>
   </span>
-  <div class="toolbar-compact">
+  <div class="timeline-toolbar-compact">
     <time class="timeline-meta-muted"><%= display_created_at_with_time(event) %></time>
     <div class="body-muted"><a href="<%= member_reports_path(event.user) %>" class="link-strong-underline"><%= event.user.name %></a> submitted a new report titled <a href="<%= member_report_path(event.user, event.trackable) %>" class="link-strong-underline"><%= event.trackable.title %></a>
       <% if event.trackable.nil? %>
