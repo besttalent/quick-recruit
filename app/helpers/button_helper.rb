@@ -31,6 +31,16 @@ module ButtonHelper
     out.html_safe
   end
 
+  def confirm_action_button(title, path, message, style = "link")
+    out = button_to title, path, class: style, data: {
+                                 controller: "confirmation",
+                                 "confirmation-message-value": message,
+                                 action: "confirmation#confirm",
+                               }
+
+    out.html_safe
+  end
+
   def edit_button(path)
     out = link_to "Edit", path, class: "btn-inline-edit"
 

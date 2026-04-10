@@ -1,13 +1,8 @@
-
-
 <div class="stack-fill">
-  
   <div class="content-shell">
-    
     <div class="sidebar-shell"><%= render partial: "candidate/profile", locals: { candidate: @candidate } %></div>
 
     <div class="flex-1">
-      
       <%= render partial: "candidate/nav", locals: { candidate: @candidate } %>
 
       <div class="table-wrap">
@@ -43,59 +38,32 @@
 
     <div class="shrink-0 border-t border-gray-200 px-4 py-4 sm:px-6 lg:w-80 lg:border-l lg:border-t-0 lg:pr-8 xl:pr-6">
       <% if (!@candidate.opening.nil? and @candidate.opening.active?) or current_user.admin_or_recruiter_admin? %>
-        
         <div>
           <h5 class="panel-title">Send Email</h5>
 
           <p class="text-muted-sm-spaced">Select which email you want to send to the candidate.</p>
 
-          <%= button_to "About Us & Job Description Email", candidate_emails_path(@candidate, kind: "about_us_and_jd_email"), class: "link", data: {
-                                                                                                                                controller: "confirmation",
-                                                                                                                                "confirmation-message-value": "Are you sure you want to send Company Profile & JD email to this candidate?",
-                                                                                                                                action: "confirmation#confirm",
-                                                                                                                              } %>
+          <% email_actions = [
+            ["About Us & Job Description Email", "about_us_and_jd_email", "Are you sure you want to send Company Profile & JD email to this candidate?"],
+            ["About Us Email", "about_us_email", "Are you sure you want to send Company Profile email to this candidate?"],
+            ["Job Description Email", "job_description_email", "Are you sure you want to send Job Description email to this candidate?"],
+            ["F2F Interview Details Email", "f2f_detail_email", "Are you sure you want to send details for Face to Face round to this candidate?"],
+            ["Please send resume Email", "send_resume_email", "Are you sure you want to ask this candidate to send resume?"],
+          ] %>
 
-          <%= button_to "About Us Email", candidate_emails_path(@candidate, kind: "about_us_email"), class: "link", data: {
-                                                                                                       controller: "confirmation",
-                                                                                                       "confirmation-message-value": "Are you sure you want to send Company Profile email to this candidate?",
-                                                                                                       action: "confirmation#confirm",
-                                                                                                     } %>
+          <% email_actions.each do |title, kind, message| %>
+            <%= confirm_action_button(title, candidate_emails_path(@candidate, kind: kind), message) %>
+          <% end %>
 
-          <%= button_to "Job Description Email", candidate_emails_path(@candidate, kind: "job_description_email"), class: "link", data: {
-                                                                                                                     controller: "confirmation",
-                                                                                                                     "confirmation-message-value": "Are you sure you want to send Job Description email to this candidate?",
-                                                                                                                     action: "confirmation#confirm",
-                                                                                                                   } %>
+          <% alert_email_actions = [
+            ["Rejection Email", "rejection_email", "Are you sure you want to send rejection email to this candidate?"],
+            ["Not A Match Email", "not_a_match_email", "Are you sure you want to send Not a Match email to this candidate?"],
+            ["Sorry, Position Closed Email", "position_closed_email", "Are you sure you want to inform candidate that position has been closed?"],
+          ] %>
 
-          <%= button_to "F2F Interview Details Email", candidate_emails_path(@candidate, kind: "f2f_detail_email"), class: "link", data: {
-                                                                                                                      controller: "confirmation",
-                                                                                                                      "confirmation-message-value": "Are you sure you want to send details for Face to Face round to this candidate?",
-                                                                                                                      action: "confirmation#confirm",
-                                                                                                                    } %>
-
-          <%= button_to "Please send resume Email", candidate_emails_path(@candidate, kind: "send_resume_email"), class: "link", data: {
-                                                                                                                    controller: "confirmation",
-                                                                                                                    "confirmation-message-value": "Are you sure you want to ask this candidate to send resume?",
-                                                                                                                    action: "confirmation#confirm",
-                                                                                                                  } %>
-
-          <%= button_to "Rejection Email", candidate_emails_path(@candidate, kind: "rejection_email"), class: "font-medium text-red-600 dark:text-red-500 hover:underline text-sm", data: {
-                                                                                                         controller: "confirmation",
-                                                                                                         "confirmation-message-value": "Are you sure you want to send rejection email to this candidate?",
-                                                                                                         action: "confirmation#confirm",
-                                                                                                       } %>
-
-          <%= button_to "Not A Match Email", candidate_emails_path(@candidate, kind: "not_a_match_email"), class: "font-medium text-red-600 dark:text-red-500 hover:underline text-sm", data: {
-                                                                                                             controller: "confirmation",
-                                                                                                             "confirmation-message-value": "Are you sure you want to send Not a Match email to this candidate?",
-                                                                                                             action: "confirmation#confirm",
-                                                                                                           } %>
-
-          <%= button_to "Sorry, Position Closed Email", candidate_emails_path(@candidate, kind: "position_closed_email"), class: "font-medium text-red-600 dark:text-red-500 hover:underline text-sm", data: {
-                                                                                                                            controller: "confirmation",
-                                                                                                                            "confirmation-message-value": "Are you sure you want to inform candidate that position has been closed?",
-                                                                                                                            action: "confirmation#confirm",
-                                                                                                                          } %>
+          <% alert_email_actions.each do |title, kind, message| %>
+            <%= confirm_action_button(title, candidate_emails_path(@candidate, kind: kind), message, "font-medium text-red-600 dark:text-red-500 hover:underline text-sm") %>
+          <% end %>
         </div>
       <% else %>
         <div id="alert-additional-content-2" class="p-4 mb-4 text-red-800 border border-red-300 rounded-sm bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800" role="alert">
