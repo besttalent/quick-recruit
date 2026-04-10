@@ -198,7 +198,7 @@
   @apply font-medium ml-2 invisible group-hover:visible text-primary-600 dark:text-primary-500 inline-flex items-center;
 }
 
-.field-label-block {
+.form-input-label {
   @apply block mb-2 text-sm font-medium text-gray-900 dark:text-white;
 }
 
@@ -215,9 +215,12 @@
 }
 
 .heading-lg-soft {
-  @apply heading-lg-soft;
+  @apply text-lg font-semibold dark:text-white;
 }
 
+.page-heading {
+  @apply text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white;
+}
 .body-muted {
   @apply text-sm font-normal text-gray-500 dark:text-gray-300;
 }

@@ -10,7 +10,7 @@
           <%= form_with url: report_new_candidates_path, method: :get do |form| %>
             <main class="max-w-lg pt-6 pb-12 mx-auto space-y-4 lg:pb-16">
               <div>
-                <label for="created_by" class="field-label-block"> Created By </label>
+                <label for="created_by" class="form-input-label"> Created By </label>
                 <%= form.collection_select(:created_by, User.owners, :id, :name, { :prompt => "Select Created by ", :selected => (params["created_by"] if !params["created_by"].blank?) }, :class => "form-text-field") %>
               </div>
 
@@ -25,22 +25,22 @@
               </div>
 
               <div>
-                <label for="opening_id" class="field-label-block"> Job Association </label>
+                <label for="opening_id" class="form-input-label"> Job Association </label>
                 <%= form.collection_select(:opening_id, @openings.order(:title), :id, :title, { :prompt => "Select Associated With", :selected => (params["opening_id"] if !params["opening_id"].blank?) }, :class => "form-text-field") %>
               </div>
 
               <div>
-                <label for="bucket" class="field-label-block"> Bucket </label>
+                <label for="bucket" class="form-input-label"> Bucket </label>
                 <%= select_tag :bucket, options_for_select(Candidate.buckets.map { |k, v| [k.humanize.capitalize, k] }, (params["bucket"] unless params["bucket"].blank?)), class: "form-text-field", :name => "bucket", :prompt => "Select Bucket" %>
               </div>
 
               <div>
-                <label for="status" class="field-label-block"> Current Status </label>
+                <label for="status" class="form-input-label"> Current Status </label>
                 <%= select_tag :status, options_for_select(Candidate.statuses.map { |k, v| [k.humanize.capitalize, k] }, (params["status"] unless params["status"].blank?)), class: "form-text-field", :name => "status", :prompt => "Select Status" %>
               </div>
 
               <div>
-                <label for="source_id" class="field-label-block"> Source </label>
+                <label for="source_id" class="form-input-label"> Source </label>
                 <%= form.collection_select(:source_id, @sources.order(:title), :id, :title, { :prompt => "Select Source", :selected => (params["source_id"] if !params["source_id"].blank?) }, :class => "form-text-field") %>
               </div>
 
