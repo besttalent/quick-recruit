@@ -1,0 +1,36 @@
+/* Table structure and cell styles */
+.table-head {
+  @apply px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase whitespace-nowrap;
+}
+
+.table-head-cell {
+  @apply px-4 py-3 whitespace-nowrap;
+}
+
+.table-cell {
+  @apply px-6 py-4 overflow-auto text-sm text-gray-700 max-w-full;
+}
+
+.table-cell-strong {
+  @apply px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white;
+}
+
+.table {
+  @apply min-w-full divide-y divide-gray-200;
+}
+
+.table-body {
+  @apply bg-white divide-y divide-gray-200;
+}
+
+.table-head-muted {
+  @apply text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400;
+}
+
+.table-row-hover {
+  @apply bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600;
+}
+
+.table-wrap {
+  @apply relative overflow-x-auto;
+}

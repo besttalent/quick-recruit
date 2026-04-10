@@ -1,0 +1,100 @@
+/* Navigation and menu styles */
+.nav-selected {
+  @apply bg-gray-500 text-white hover:bg-gray-500 hover:text-white px-3 py-2 rounded-sm text-sm font-medium;
+}
+
+.nav-unselected {
+  @apply text-gray-300 hover:bg-gray-500 hover:text-white px-3 py-2 rounded-sm text-sm font-medium;
+}
+
+.navbar-max {
+  @apply mx-auto max-w-screen-2xl sm:px-6 lg:px-8;
+}
+
+.navbar-row {
+  @apply relative flex h-12 items-center justify-between;
+}
+
+.navbar-main {
+  @apply flex flex-1 items-center justify-center sm:items-stretch sm:justify-start;
+}
+
+.navbar-mobile-toggle {
+  @apply absolute inset-y-0 left-0 flex items-center sm:hidden;
+}
+
+.navbar-brand-wrap {
+  @apply flex items-center flex-shrink-0;
+}
+
+.navbar-brand-text {
+  @apply text-white font-extrabold font-mono;
+}
+
+.navbar-search-wrap {
+  @apply flex w-96 px-2 lg:ml-6 lg:justify-end;
+}
+
+.navbar-search-input {
+  @apply block w-full py-1 pl-10 pr-3 leading-5 text-gray-300 placeholder-gray-400 bg-gray-700 border border-transparent rounded-xs focus:outline-hidden focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 sm:text-sm;
+}
+
+.navbar-right {
+  @apply absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-2 sm:pr-0;
+}
+
+.navbar-notification {
+  @apply relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-hidden focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800;
+}
+
+.navbar-user-block {
+  @apply hidden sm:ml-2 sm:block;
+}
+
+.navbar-user-button {
+  @apply relative flex rounded-full bg-gray-800 text-sm focus:outline-hidden focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800;
+}
+
+.navbar-user-menu {
+  @apply absolute left-0 z-10 block w-full mt-2 origin-top-right bg-white rounded-xs shadow-lg ring-1 ring-black/5 focus:outline-hidden;
+}
+
+.navbar-user-menu-items {
+  @apply hidden absolute divide-y divide-gray-200 right-0 z-10 mt-2 w-48 origin-top-right rounded-xs bg-white py-1 shadow-lg ring-1 ring-gray-200/5 focus:outline-hidden border border-gray-200 dark:bg-gray-700 dark:divide-gray-600;
+}
+
+.navbar-user-name {
+  @apply block text-sm text-gray-900 dark:text-white;
+}
+
+.navbar-user-email {
+  @apply block text-xs text-gray-500 truncate dark:text-gray-400;
+}
+
+.navbar-dropdown-anchor {
+  @apply w-full max-w-xs lg:max-w-sm justify-end;
+}
+
+.selected {
+  @apply bg-gray-200 text-gray-900 hover:bg-gray-200 rounded-sm px-3 py-1 flex items-center text-sm font-medium;
+}
+
+.unselected {
+  @apply text-gray-900 hover:text-gray-900 hover:bg-gray-50 rounded-sm px-3 py-1 flex items-center text-sm font-medium;
+}
+
+.selected-tab {
+  @apply block py-3 px-4 text-primary-600 hover:text-primary-600  border-primary-600 border-b-2;
+}
+
+.unselected-tab {
+  @apply block py-3 px-4 text-gray-500  hover:text-primary-600 hover:border-b-2 hover:border-primary-600;
+}
+
+.tabs-item {
+  @apply block border-b border-gray-200 dark:border-gray-700 lg:inline lg:border-b-0;
+}
+
+.tabs-item-inline {
+  @apply block lg:inline;
+}

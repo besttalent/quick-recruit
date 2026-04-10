@@ -1,0 +1,32 @@
+/* Page-level container and section styles */
+.page-surface {
+  @apply bg-white dark:bg-gray-900;
+}
+
+.form-page-container {
+  @apply py-8 px-4 mx-auto max-w-2xl lg:py-8;
+}
+
+.section-title {
+  @apply mb-4 mt-8 text-xl font-semibold leading-none text-gray-900 dark:text-white;
+}
+
+.page-card {
+  @apply relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-xs;
+}
+
+.page-container-wide {
+  @apply px-4 mx-auto max-w-screen-2xl lg:px-8;
+}
+
+.panel-header-row {
+  @apply flex-row items-center justify-between p-4 space-y-3 sm:flex sm:space-y-0 sm:space-x-4;
+}
+
+.section-pad {
+  @apply px-4 py-2 sm:p-2;
+}
+
+.page-bg-shell {
+  @apply bg-gray-50 dark:bg-gray-900 py-3 sm:py-5 min-h-screen;
+}

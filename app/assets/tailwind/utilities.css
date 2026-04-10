@@ -1,0 +1,67 @@
+/* Shared UI utility classes */
+.svg-icon {
+  @apply text-gray-400 group-hover:text-gray-500 shrink-0 -ml-1 mr-3 h-6 w-6;
+}
+
+.sort {
+  top: 1rem;
+  left: 0.5rem;
+  width: 0;
+  height: 0;
+  border-left: 6px solid #f9fafb;
+  border-right: 6px solid #f9fafb;
+  display: inline-block;
+  position: inherit;
+}
+
+.sort-desc {
+  border-top: 8px solid #808080;
+}
+
+.sort-asc {
+  border-bottom: 8px solid #808080;
+}
+
+.tooltip {
+  @apply inline-block absolute z-10 py-1 px-2 text-xs font-medium text-white bg-gray-900 rounded-xs shadow-xs transition-opacity duration-300 dark:bg-gray-700;
+}
+
+.icon-button {
+  @apply p-1 text-gray-500 rounded-xs hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700;
+}
+
+.icon-button-muted {
+  @apply p-1 ml-1 text-gray-500 rounded-xs hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700;
+}
+
+.dropdown-item {
+  @apply block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white;
+}
+
+.input-muted {
+  @apply w-full text-sm text-left text-gray-500 dark:text-gray-400;
+}
+
+.inline-link-row {
+  @apply flex items-center hover:underline;
+}
+
+.hover-list-row {
+  @apply border-b border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700;
+}
+
+.hover-reveal-link {
+  @apply font-medium ml-2 invisible group-hover:visible text-primary-600 dark:text-primary-500 inline-flex items-center;
+}
+
+.overlay-hitbox {
+  @apply absolute -inset-1.5;
+}
+
+.metrics-row {
+  @apply flex items-baseline justify-center text-xl font-semibold text-gray-600;
+}
+
+.grid-block-spaced {
+  @apply mt-4 mb-2 grid gap-4 sm:gap-6;
+}

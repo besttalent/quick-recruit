@@ -1,0 +1,24 @@
+/* Timeline event list styles */
+.timeline-item {
+  @apply mb-4 ms-6;
+}
+
+.timeline-meta-muted {
+  @apply mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0;
+}
+
+.timeline-node {
+  @apply absolute flex items-center justify-center w-7 h-7 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900;
+}
+
+.timeline-list-wrap {
+  @apply px-0 lg:px-6 py-6;
+}
+
+.timeline-list-track {
+  @apply relative border-s border-gray-200 dark:border-gray-700;
+}
+
+.toolbar-compact {
+  @apply items-center justify-between p-1 sm:flex dark:bg-gray-700 dark:border-gray-600;
+}

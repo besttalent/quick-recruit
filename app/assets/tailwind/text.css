@@ -1,0 +1,52 @@
+/* Text, links, and heading styles */
+.link {
+  @apply font-medium text-blue-600 dark:text-blue-500 hover:underline text-sm cursor-pointer;
+}
+
+.link-strong-underline {
+  @apply font-medium text-gray-900 hover:underline;
+}
+
+.link-strong-subtle {
+  @apply font-medium text-gray-900 hover:text-gray-600 hover:underline;
+}
+
+.text-muted-sm {
+  @apply text-gray-500 dark:text-gray-400 text-sm;
+}
+
+.text-muted-sm-spaced {
+  @apply text-gray-500 dark:text-gray-400 text-sm mb-4;
+}
+
+.meta-row {
+  @apply flex items-center text-sm font-light text-gray-900 dark:text-gray-400;
+}
+
+.meta-text {
+  @apply text-gray-900 text-sm dark:text-gray-400;
+}
+
+.caption-muted {
+  @apply font-medium text-gray-500;
+}
+
+.heading-lg-soft {
+  @apply text-lg font-semibold dark:text-white;
+}
+
+.panel-title {
+  @apply mr-3 font-semibold dark:text-white;
+}
+
+.heading-sm-strong {
+  @apply font-semibold text-sm leading-none text-gray-900 dark:text-white;
+}
+
+.page-heading {
+  @apply text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white;
+}
+
+.body-muted {
+  @apply text-sm font-normal text-gray-500 dark:text-gray-300;
+}
