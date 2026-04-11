@@ -88,14 +88,13 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { :host => "recruit.quicklabs.in" }
+  config.action_mailer.default_url_options = { :host => "recruit.bestalent.io" }
 
-  config.default_url_options = { host: "recruit.quicklabs.in" }
+  config.default_url_options = { host: "recruit.besttalent.io" }
 
   # Enable DNS rebinding protection and other `Host` header attacks.
   config.hosts = [
-    "recruit.quicklabs.in",     # Allow requests from example.com
-    "quick-recruit-copy.onrender.com"
+    "recruit.bestalent.io",     # Allow requests from example.com
   ]
   # Skip DNS rebinding protection for the default health check endpoint.
   config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
