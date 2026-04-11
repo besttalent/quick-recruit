@@ -1,0 +1,11 @@
+{
+  "version": "1.1.0",
+  "createdAt": "2026-04-10T16:29:10.633Z",
+  "updatedAt": "2026-04-10T16:29:10.635Z",
+  "options": {
+    "ignoredControllerIdentifiers": [],
+    "ignoredAttributes": [
+      "data-tooltip-target"
+    ]
+  }
+}

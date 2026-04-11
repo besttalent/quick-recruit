@@ -50,6 +50,10 @@
   @apply border-b border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700;
 }
 
+.header-list-row {
+  @apply border-b border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700;
+}
+
 .hover-reveal-link {
   @apply font-medium ml-2 invisible group-hover:visible text-primary-600 dark:text-primary-500 inline-flex items-center;
 }
