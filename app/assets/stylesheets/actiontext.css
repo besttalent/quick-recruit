@@ -2,17 +2,21 @@
  * Action Text/Trix overrides.
  * Base Trix styles are loaded from layouts via stylesheet_link_tag "trix".
  */
-.trix-content .attachment-gallery>action-text-attachment,
-.trix-content .attachment-gallery>.attachment {
+.trix-content .attachment-gallery > action-text-attachment,
+.trix-content .attachment-gallery > .attachment {
   flex: 1 0 33%;
   padding: 0 0.5em;
   max-width: 33%;
 }
 
-.trix-content .attachment-gallery.attachment-gallery--2>action-text-attachment,
-.trix-content .attachment-gallery.attachment-gallery--2>.attachment,
-.trix-content .attachment-gallery.attachment-gallery--4>action-text-attachment,
-.trix-content .attachment-gallery.attachment-gallery--4>.attachment {
+.trix-content
+  .attachment-gallery.attachment-gallery--2
+  > action-text-attachment,
+.trix-content .attachment-gallery.attachment-gallery--2 > .attachment,
+.trix-content
+  .attachment-gallery.attachment-gallery--4
+  > action-text-attachment,
+.trix-content .attachment-gallery.attachment-gallery--4 > .attachment {
   flex-basis: 50%;
   max-width: 50%;
 }
@@ -34,7 +38,7 @@ trix-editor ol {
 
 trix-editor a {
   text-decoration: underline !important;
-  color: blue
+  color: blue;
 }
 
 trix-toolbar .trix-button--icon {
@@ -58,7 +62,7 @@ trix-editor {
 
 .trix-content a {
   text-decoration: underline !important;
-  color: blue
+  color: blue;
 }
 
 .trix-content div:first-letter {

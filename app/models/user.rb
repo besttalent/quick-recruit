@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  include ImageAttachmentValidatable
+
   has_secure_password
 
   validates :email, presence: true, uniqueness: true
@@ -12,8 +14,7 @@ class User < ApplicationRecord
 
   enum :role, data: 0, recruiter: 1, interviewer: 2, admin: 3, recruiter_admin: 4, super_admin: 5
 
-  validate :avatar_content_type
-  validate :avatar_size
+  validates_image_attachment :avatar
 
   scope :recruiters, -> { where(role: [:recruiter, :recruiter_admin], active: true).order(:first_name) }
   scope :admins, -> { where(role: :admin, active: true) }
@@ -21,24 +22,12 @@ class User < ApplicationRecord
   scope :owners, -> { where(role: [:admin, :recruiter, :recruiter_admin], active: true).order(:first_name) }
   scope :interviewers, -> { where(role: [:interviewer, :admin], active: true).order(:first_name) }
 
-  def avatar_size
-    if avatar.attached? && avatar.blob.byte_size > 1.megabytes
-      errors.add(:avatar, "size should not be more than 1MB")
-    end
-  end
-
   def name
     first_name + " " + last_name
   end
 
   def admin_or_recruiter_admin?
     admin? or recruiter_admin? or super_admin?
-  end
-
-  def avatar_content_type
-    if avatar.attached? && !avatar.content_type.in?(%w(image/jpeg image/png))
-      errors.add(:avatar, "must be a JPEG or PNG")
-    end
   end
 
   def self.bot
@@ -51,5 +40,9 @@ class User < ApplicationRecord
 
   def openings
     Opening.where(owner: self, active: true)
+  end
+
+  def account
+    Account.first
   end
 end

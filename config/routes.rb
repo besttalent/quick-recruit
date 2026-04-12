@@ -89,6 +89,10 @@ Rails.application.routes.draw do
   end
 
   namespace :account do
+    resource :account, only: [:show, :update] do
+      patch :logo, action: :update_logo
+      delete :logo, action: :destroy_logo
+    end
     resources :roles, except: [:new, :show]
     resources :sources, except: [:new, :show]
   end

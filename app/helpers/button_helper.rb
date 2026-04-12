@@ -10,11 +10,11 @@ module ButtonHelper
     out.html_safe
   end
 
-  def styled_delete_button(path, style)
-    out = link_to "Delete", path, class: style, data: {
+  def styled_delete_button(path, style, title: "Delete", message: "Are you sure you want to delete this?")
+    out = link_to title, path, class: style, data: {
                                     controller: "confirmation",
                                     "turbo-method": :delete,
-                                    "confirmation-message-value": "Are you sure you want to delete this?",
+                                    "confirmation-message-value": message,
                                     action: "confirmation#confirm",
                                   }
 

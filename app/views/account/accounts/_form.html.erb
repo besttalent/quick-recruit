@@ -1,0 +1,14 @@
+<%= tailwind_form_with(model: @account, id: "account_form", url: account_account_path, method: :patch, html: { multipart: true }) do |form| %>
+  <div class="space-y-6">
+    <%= render "shared/form_messages", resource: @account, message: local_assigns[:message] %>
+    <%= render "shared/form_header", title: "Company Profile", subtitle: "Configure company-facing details used across recruiting workflows." %>
+
+    <%= form.text_field :company_name, "Company Name", autocomplete: "organization", required: true %>
+    <%= form.text_field :company_website_url, "Company Website URL", type: :url, placeholder: "https://example.com", required: true %>
+    <%= form.text_field :company_introduction, "Company Introduction", autocomplete: "off", required: true %>
+
+    <div class="sidebar-actions-row">
+      <%= form.submit "Save", class: "btn-primary" %>
+    </div>
+  </div>
+<% end %>

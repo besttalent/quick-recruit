@@ -1,4 +1,4 @@
-module Account
+class Account
   module TitleResourceCrud
     extend ActiveSupport::Concern
 

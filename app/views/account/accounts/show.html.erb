@@ -1,0 +1,13 @@
+<main class="report-settings-shell">
+  <div class="report-settings-grid">
+    <%= render "shared/account_menu" %>
+
+    <main class="report-settings-content">
+      <div class="mt-6 flex-grow lg:mt-0 lg:ml-6 lg:flex-shrink-0 lg:flex-grow-0">
+        <%= render "account/accounts/form", account: @account %>
+      </div>
+    </main>
+
+    <div class="flex"><%= render "logo", account: @account %></div>
+  </div>
+</main>
