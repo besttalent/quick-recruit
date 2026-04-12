@@ -1,14 +1,12 @@
 <section class="page-surface">
   <div class="page-form-container">
     <div class="w-24 mb-4">
-      <a href="/public/openings">
-        <%= svg_icon("crownstack-logo", class_name: "w-24") %>
-      </a>
+      <a href="/public/openings"><%= image_tag current_account.logo.variant(resize_to_limit: [96, 96]), class: "w-24 h-24 rounded-full object-cover", alt: "#{current_account.company_name} logo" if current_account.logo.attached? %></a>
     </div>
 
     <div>
       <h1 class="text-2xl font-bold dark:text-white">
-        Work At Crownstack
+        Work At
       </h1>
 
       <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">

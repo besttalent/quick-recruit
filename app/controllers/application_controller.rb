@@ -28,6 +28,10 @@ class ApplicationController < ActionController::Base
     Current.user ||= authenticate_user_from_session
   end
 
+  def current_account
+    Current.account ||= Account.first
+  end
+
   helper_method :current_user
 
   def authenticate_user_from_session

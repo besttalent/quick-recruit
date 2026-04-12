@@ -1,6 +1,6 @@
 <section class="bg-gray-50 dark:bg-gray-900">
   <div class="auth-shell">
-    <a href="/" class="auth-brand"><%= svg_icon("crownstack-logo", class_name: "w-8 h-8 mr-2") %> Quick Recruit</a>
+    <a href="/" class="auth-brand"><%= image_tag current_account.logo.variant(resize_to_limit: [32, 32]), class: "w-8 h-8 mr-2 rounded-full object-cover", alt: "#{current_account.company_name} logo" if current_account.logo.attached? %> Quick Recruit</a>
 
     <div class="w-full p-6 bg-white rounded-xs shadow-sm dark:border md:mt-0 sm:max-w-md dark:bg-gray-800 dark:border-gray-700 sm:p-8">
       <h2 class="mb-1 text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
